@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -183,6 +184,9 @@ return [
 
         //Maatwebsite Excel
         Maatwebsite\Excel\ExcelServiceProvider::class,
+
+        //Rest Client Impulzo
+        \Impulzo\RestClientService\RestClientServiceProvider::class
 
     ],
 
@@ -232,9 +236,11 @@ return [
         'Session' => Illuminate\Support\Facades\Session::class,
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'Str' => Illuminate\Support\Str::class,
+        'Token' => Illuminate\Support\Facades\Token::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Illuminate\Container\Container' => 'Illuminate\Container\Container',
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
