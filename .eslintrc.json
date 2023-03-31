@@ -15,6 +15,18 @@
         "node": true
     },
     "rules": {
-        // Add your own custom rules here
+        "indent": ["error", 2],
+        "quotes": ["error", "double"],
+        "@typescript-eslint/quotes": ["error", "double"],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
     }
 }
