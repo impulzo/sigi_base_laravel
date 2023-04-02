@@ -9,7 +9,8 @@ class Role extends \TCG\Voyager\Models\Role
 {
     use HasFactory;
 
-    public function scopeRoles($query){
-        return $query->where('name','<>','support');
+    public function scopeRoles($query)
+    {
+        return $query->where('name', '<>', 'support');
     }
 }
