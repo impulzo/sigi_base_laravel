@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,14 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::group(['prefix' => 'invoice'], function () {
+    //GET catalogs
+    Route::get('/regimens',[InvoiceController::class,'getRegimens']);
+    Route::get('/currencies',[InvoiceController::class,'getCurrencies']);
+    Route::get('/cfdi_types',[InvoiceController::class,'getCfdiTypes']);
+    Route::get('/payments_form',[InvoiceController::class,'getPaymentsForm']);
+    Route::get('/payments_method',[InvoiceController::class,'getPaymentsMethod']);
+    Route::get('/cfdi_use',[InvoiceController::class,'getCfdisUse']);
 });

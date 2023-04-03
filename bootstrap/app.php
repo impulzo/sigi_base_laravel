@@ -41,6 +41,9 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->register(
+    \Impulzo\RestClientService\RestClientServiceProvider::class
+);
 /*
 |--------------------------------------------------------------------------
 | Return The Application

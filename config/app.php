@@ -161,6 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        \Impulzo\RestClientService\RestClientServiceProvider::class,
 
         /*
          * Package Service Providers...

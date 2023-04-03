@@ -13,10 +13,12 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "impulzo/rest_client_service": "dev-master",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "luecano/numero-a-letras": "^3.0",
         "maatwebsite/excel": "^3.1",
+        "mpdf/mpdf": "^8.1",
         "orangehill/iseed": "^3.0",
         "tcg/voyager": "^1.6"
     },

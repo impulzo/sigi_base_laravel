@@ -69,7 +69,7 @@
                                         <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title(str_replace('_',' ', $table))}}</strong></label>
                                         <ul>
                                             @foreach($permission as $perm)
-                                                @if($perm->key == 'browse_admin')
+                                                @if($perm->key == 'browse_admin' && Auth::user()->role->id !=1)
                                                   <li>
                                                       <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" checked readonly>
                                                       <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title(str_replace('_', ' ', $perm->key))}}</label>
