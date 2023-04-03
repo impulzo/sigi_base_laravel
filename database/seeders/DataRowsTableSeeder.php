@@ -19,7 +19,7 @@ class DataRowsTableSeeder extends Seeder
         \DB::table('data_rows')->delete();
         
         \DB::table('data_rows')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'data_type_id' => 1,
@@ -35,7 +35,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'data_type_id' => 1,
@@ -51,7 +51,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'data_type_id' => 1,
@@ -67,7 +67,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'data_type_id' => 1,
@@ -83,7 +83,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'data_type_id' => 1,
@@ -99,7 +99,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'data_type_id' => 1,
@@ -115,7 +115,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'data_type_id' => 1,
@@ -131,7 +131,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'data_type_id' => 1,
@@ -147,7 +147,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'data_type_id' => 1,
@@ -163,7 +163,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsTo","column":"role_id","key":"id","label":"display_name","pivot_table":"roles","pivot":"0","taggable":"0"}',
                 'order' => 10,
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'data_type_id' => 1,
@@ -179,7 +179,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsToMany","column":"id","key":"id","label":"display_name","pivot_table":"user_roles","pivot":"1","taggable":"0"}',
                 'order' => 11,
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'data_type_id' => 1,
@@ -195,7 +195,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 12,
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'data_type_id' => 2,
@@ -208,10 +208,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => NULL,
+                'details' => null,
                 'order' => 1,
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'data_type_id' => 2,
@@ -224,10 +224,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => NULL,
+                'details' => null,
                 'order' => 2,
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'data_type_id' => 2,
@@ -240,10 +240,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => NULL,
+                'details' => null,
                 'order' => 3,
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'data_type_id' => 2,
@@ -256,10 +256,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => NULL,
+                'details' => null,
                 'order' => 4,
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'data_type_id' => 3,
@@ -275,7 +275,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'data_type_id' => 3,
@@ -291,7 +291,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'data_type_id' => 3,
@@ -307,7 +307,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'data_type_id' => 3,
@@ -323,7 +323,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'data_type_id' => 3,
@@ -339,7 +339,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'data_type_id' => 1,
@@ -355,7 +355,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 9,
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'data_type_id' => 1,
@@ -371,7 +371,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'data_type_id' => 4,
@@ -387,7 +387,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'data_type_id' => 4,
@@ -403,7 +403,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'data_type_id' => 4,
@@ -419,7 +419,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:14|min:13","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 3,
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'data_type_id' => 4,
@@ -435,7 +435,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 6,
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'data_type_id' => 4,
@@ -451,7 +451,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'data_type_id' => 4,
@@ -467,7 +467,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'data_type_id' => 4,
@@ -483,7 +483,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 9,
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'data_type_id' => 4,
@@ -499,7 +499,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:16|min:15","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 4,
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'data_type_id' => 4,
@@ -515,7 +515,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:18|min:17","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 5,
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'data_type_id' => 5,
@@ -531,7 +531,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'data_type_id' => 5,
@@ -547,7 +547,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            33 => 
+            33 =>
             array (
                 'id' => 34,
                 'data_type_id' => 5,
@@ -563,7 +563,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 3,
             ),
-            34 => 
+            34 =>
             array (
                 'id' => 35,
                 'data_type_id' => 5,
@@ -579,7 +579,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required","messages":{"required":"El campo :attribute es requerido."}}}',
                 'order' => 4,
             ),
-            35 => 
+            35 =>
             array (
                 'id' => 36,
                 'data_type_id' => 5,
@@ -595,7 +595,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            36 => 
+            36 =>
             array (
                 'id' => 37,
                 'data_type_id' => 5,
@@ -611,7 +611,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            37 => 
+            37 =>
             array (
                 'id' => 38,
                 'data_type_id' => 5,
@@ -627,7 +627,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            38 => 
+            38 =>
             array (
                 'id' => 39,
                 'data_type_id' => 6,
@@ -643,7 +643,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            39 => 
+            39 =>
             array (
                 'id' => 40,
                 'data_type_id' => 6,
@@ -659,7 +659,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:30","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            40 => 
+            40 =>
             array (
                 'id' => 41,
                 'data_type_id' => 6,
@@ -675,7 +675,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            41 => 
+            41 =>
             array (
                 'id' => 42,
                 'data_type_id' => 6,
@@ -691,7 +691,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            42 => 
+            42 =>
             array (
                 'id' => 43,
                 'data_type_id' => 6,
@@ -708,7 +708,5 @@ class DataRowsTableSeeder extends Seeder
                 'order' => 5,
             ),
         ));
-        
-        
     }
 }
