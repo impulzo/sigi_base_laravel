@@ -219,6 +219,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2023-03-25 12:47:13',
                 'updated_at' => '2023-03-25 12:47:13',
             ),
+            25 => 
+            array (
+                'id' => 26,
+                'key' => 'browse_fiscals',
+                'table_name' => 'fiscals',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-02 22:25:32',
+            ),
+            26 => 
+            array (
+                'id' => 27,
+                'key' => 'read_fiscals',
+                'table_name' => 'fiscals',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-02 22:25:32',
+            ),
+            27 => 
+            array (
+                'id' => 28,
+                'key' => 'edit_fiscals',
+                'table_name' => 'fiscals',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-02 22:25:32',
+            ),
+            28 => 
+            array (
+                'id' => 29,
+                'key' => 'add_fiscals',
+                'table_name' => 'fiscals',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-02 22:25:32',
+            ),
+            29 => 
+            array (
+                'id' => 30,
+                'key' => 'delete_fiscals',
+                'table_name' => 'fiscals',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-02 22:25:32',
+            ),
         ));
         
         

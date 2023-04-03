@@ -73,6 +73,24 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2022-11-09 13:18:29',
                 'updated_at' => '2022-11-09 14:02:45',
             ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'fiscals',
+                'slug' => 'fiscals',
+                'display_name_singular' => 'Datos fiscales',
+                'display_name_plural' => 'Datos fiscales',
+                'icon' => 'voyager-receipt',
+                'model_name' => 'App\\Models\\Fiscal',
+                'policy_name' => NULL,
+                'controller' => 'App\\Http\\Controllers\\InvoiceController',
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2023-04-02 22:25:32',
+                'updated_at' => '2023-04-03 01:01:49',
+            ),
         ));
         
         
