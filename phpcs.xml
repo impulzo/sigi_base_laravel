@@ -53,4 +53,8 @@
             <property name="ignoreLongMultiline" value="true" />
         </properties>
     </rule>
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <exclude-pattern>database/*</exclude-pattern>
+    </rule>
+
 </ruleset>

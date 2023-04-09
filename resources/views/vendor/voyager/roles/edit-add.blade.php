@@ -53,7 +53,7 @@
 
                                 </div>
                             @endforeach
-
+                            
                             <label for="permission">{{ __('voyager::generic.permissions') }}</label><br>
                             <a href="#" class="permission-select-all">{{ __('voyager::generic.select_all') }}</a> / <a href="#"  class="permission-deselect-all">{{ __('voyager::generic.deselect_all') }}</a>
                             <ul class="permissions checkbox">
