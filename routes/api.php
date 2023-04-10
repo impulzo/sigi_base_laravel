@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\InventoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//inventory
+Route::get('/inventory/movements/{type}', [InventoryController::class,'getMovements']);
+Route::get('/inventory/offices', [InventoryController::class,'getOffices']);
+

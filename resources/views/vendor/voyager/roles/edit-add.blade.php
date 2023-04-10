@@ -61,7 +61,7 @@
                                     $role_permissions = (isset($dataTypeContent)) ? $dataTypeContent->permissions->pluck('key')->toArray() : [];
                                 ?>
                                 @foreach(Voyager::model('Permission')->all()->groupBy('table_name') as $table => $permission)
-                                  @if($table == 'menus' || $table == 'settings')
+                                  @if(($table == 'menus' || $table == 'settings') && Auth::user()->role->id != 1)
                                     @continue
                                   @endif
                                     <li>
