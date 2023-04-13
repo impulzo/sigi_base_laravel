@@ -319,7 +319,7 @@
                         <i class="voyager-params"></i> ¿Está seguro de realizar este movimiento en <span id="bulk_inventory_count"></span> <span id="bulk_inventory_display_name"></span>?
                     </h4>
                 </div>
-                <form action="{{ route('inventory.store') }}" id="bulk_inventory_form" method="POST">
+                <form action="{{ route('voyager.inventories.store') }}" id="bulk_inventory_form" method="POST">
                     {{ csrf_field() }}
                     <div class="modal-body" id="bulk_inventory_modal_body">
                         <input type="hidden" id="bulk_inventory_input" value="">
@@ -371,7 +371,7 @@
                         <i class="voyager-params"></i> ¿Está seguro de realizar el traspaso entre sucursales en <span id="bulk_transfer_count"></span> <span id="bulk_transfer_display_name"></span>?
                     </h4>
                 </div>
-                <form action="{{ route('inventory.store') }}" id="bulk_transfer_form" method="POST">
+                <form action="{{ route('voyager.inventories.store') }}" id="bulk_transfer_form" method="POST">
                     {{ csrf_field() }}
                     <div class="modal-body" id="bulk_transfer_modal_body">
                         <input type="hidden" id="bulk_transfer_input" value="">
@@ -604,7 +604,7 @@
         //sucursals
         let offices;
         $.ajax({
-            url:"/api/inventory/offices",
+            url:"/api/v1.0/inventories/offices",
             type: 'GET',
             dataType:'json',
             success:function(response){
@@ -654,7 +654,7 @@
             }
         });
         $.ajax({
-            url:"/api/inventory/movements/2",
+            url:"/api/v1.0/inventories/movements/2",
             type: 'GET',
             dataType:'json',
             success:function(response){

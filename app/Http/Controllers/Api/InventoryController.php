@@ -11,37 +11,31 @@ class InventoryController extends Controller
 {
     public function getMovements($type)
     {
+        $response = array('status' => 200);
         try {
-            if ($type == 1) {
+            if ($type == 1) { //ENTRADAS Y SALIDAS
                 $movements = MovementType::whereIn('type', ['E', 'S'])->get();
-            } else {
+            } else { //SOLO TRASPASOS
                 $movements = MovementType::where('type', '=', 'T')->get();
             }
-            return response()->json([
-                'data' => $movements,
-                'status' => 200
-            ]);
+            $response['data'] = $movements;
         } catch (Exception $ex) {
-            return response()->json([
-                'data' => $ex->getMessage(),
-                'status' => 500
-            ]);
+            $response['status'] = 500;
+            $response['message'] = 'Ocurrió el error siguiente: '.$ex->getMessage();
         }
+        return $response;
     }
 
     public function getOffices()
     {
+        $response = array('status' => 200);
         try {
             $offices = Office::get();
-            return response()->json([
-                'data' => $offices,
-                'status' => 200
-            ]);
+            $response['data'] = $offices;
         } catch (Exception $ex) {
-            return response()->json([
-                'data' => $ex->getMessage(),
-                'status' => 500
-            ]);
+            $response['status'] = 500;
+            $response['message'] = 'Ocurrió el error siguiente: '.$ex->getMessage();
         }
+        return $response;
     }
 }

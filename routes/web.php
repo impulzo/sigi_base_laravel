@@ -25,8 +25,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     //inventory
-    Route::post('/inventory/store', [InventoryController::class,'store'])->name('inventory.store');
-    Route::get('/inventory/{id}/history', [HistoryController::class, 'historyByInventory'])->name('inventory.history');
+    Route::get('/inventories/{id}/history', [HistoryController::class, 'historyByInventory'])->name('inventories.history');
 });
 
 Auth::routes();

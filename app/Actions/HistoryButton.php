@@ -18,7 +18,7 @@ class HistoryButton extends AbstractAction
 
     public function getDefaultRoute()
     {
-        return route('inventory.history', $this->data->id);
+        return route('inventories.history', $this->data->id);
     }
 
     public function shouldActionDisplayOnDataType()

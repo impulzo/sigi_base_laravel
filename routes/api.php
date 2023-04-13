@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //inventory
-Route::get('/inventory/movements/{type}', [InventoryController::class,'getMovements']);
-Route::get('/inventory/offices', [InventoryController::class,'getOffices']);
+Route::get('/v1.0/inventories/movements/{type}', [InventoryController::class,'getMovements']);
+Route::get('/v1.0/inventories/offices', [InventoryController::class,'getOffices']);
 

@@ -9,8 +9,9 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 
-class InventoryController extends Controller
+class InventoryController extends VoyagerBaseController
 {
     public function store(Request $request)
     {

@@ -32,12 +32,12 @@
                                 <tbody>
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{$item->movement->name}}</td>
-                                            <td>{{$item->quantity}}</td>
-                                            <td>{{$item->notes}}</td>
-                                            <td>{{$item->sucursal ? $item->sucursal->name: ''}}</td>
-                                            <td>{{$item->created_at->format('d/m/Y h:i a')}}</td>
-                                            <td>{{$item->user->name}}</td>
+                                            <td>{{ $item->movement->name }}</td>
+                                            <td>{{ $item->quantity }}</td>
+                                            <td>{{ $item->notes }}</td>
+                                            <td>{{ $item->sucursal ? $item->sucursal->name : '' }}</td>
+                                            <td>{{ $item->created_at->format('d/m/Y h:i a') }}</td>
+                                            <td>{{ $item->user->name }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -50,13 +50,51 @@
     </div>
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="{{ voyager_asset('lib/css/responsive.dataTables.min.css') }}">
-@stop
-
 @section('javascript')
     <!-- DataTables -->
-    <script src="{{ voyager_asset('lib/js/dataTables.responsive.min.js') }}"></script>
+    <script>
+        $('#dataTable').DataTable({
+            destroy: false,
+            pageLength: 10,
+            order: [
+                [1, 'desc']
+            ], //ordenar de forma descendente
+            language: {
+                sProcessing: "Procesando...",
+                sLengthMenu: "Mostrar _MENU_ registros",
+                sZeroRecords: "No se encontraron resultados",
+                sEmptyTable: "Ningún dato disponible en esta tabla",
+                sInfo: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                sInfoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
+                sInfoFiltered: "(filtrado de un total de _MAX_ registros)",
+                sInfoPostFix: "",
+                sSearch: "Buscar:",
+                sUrl: "",
+                sInfoThousands: ",",
+                sLoadingRecords: "Cargando...",
+                oPaginate: {
+                    sFirst: "Primero",
+                    sLast: "Último",
+                    sNext: "Siguiente",
+                    sPrevious: "Anterior",
+                },
+                oAria: {
+                    sSortAscending: ": Activar para ordenar la columna de manera ascendente",
+                    sSortDescending: ": Activar para ordenar la columna de manera descendente",
+                },
+            },
+            lengthMenu: [
+                [5, 10, 15],
+                [5, 10, 15],
+            ],
+        });
+
+        function reload() {
+            var initial = $('#initial_date').val();
+            var final = $('#final_date').val();
+            if (initial != '' && final != '') {
+                window.location.href = "{{ url('/') }}/admin/reports/ingresos-gastos/" + initial + "/" + final;
+            }
+        }
+    </script>
 @stop
-
-
