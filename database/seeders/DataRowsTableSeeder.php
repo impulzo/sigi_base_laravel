@@ -19,7 +19,7 @@ class DataRowsTableSeeder extends Seeder
         \DB::table('data_rows')->delete();
         
         \DB::table('data_rows')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'data_type_id' => 1,
@@ -35,7 +35,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 2,
                 'data_type_id' => 1,
@@ -51,7 +51,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 3,
                 'data_type_id' => 1,
@@ -67,7 +67,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            3 =>
+            3 => 
             array (
                 'id' => 4,
                 'data_type_id' => 1,
@@ -83,7 +83,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            4 =>
+            4 => 
             array (
                 'id' => 5,
                 'data_type_id' => 1,
@@ -99,7 +99,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            5 =>
+            5 => 
             array (
                 'id' => 6,
                 'data_type_id' => 1,
@@ -115,7 +115,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            6 =>
+            6 => 
             array (
                 'id' => 7,
                 'data_type_id' => 1,
@@ -131,7 +131,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            7 =>
+            7 => 
             array (
                 'id' => 8,
                 'data_type_id' => 1,
@@ -147,7 +147,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            8 =>
+            8 => 
             array (
                 'id' => 9,
                 'data_type_id' => 1,
@@ -163,7 +163,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsTo","column":"role_id","key":"id","label":"display_name","pivot_table":"roles","pivot":"0","taggable":"0"}',
                 'order' => 10,
             ),
-            9 =>
+            9 => 
             array (
                 'id' => 10,
                 'data_type_id' => 1,
@@ -179,7 +179,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsToMany","column":"id","key":"id","label":"display_name","pivot_table":"user_roles","pivot":"1","taggable":"0"}',
                 'order' => 11,
             ),
-            10 =>
+            10 => 
             array (
                 'id' => 11,
                 'data_type_id' => 1,
@@ -195,7 +195,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 12,
             ),
-            11 =>
+            11 => 
             array (
                 'id' => 12,
                 'data_type_id' => 2,
@@ -208,10 +208,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => null,
+                'details' => NULL,
                 'order' => 1,
             ),
-            12 =>
+            12 => 
             array (
                 'id' => 13,
                 'data_type_id' => 2,
@@ -224,10 +224,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => null,
+                'details' => NULL,
                 'order' => 2,
             ),
-            13 =>
+            13 => 
             array (
                 'id' => 14,
                 'data_type_id' => 2,
@@ -240,10 +240,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => null,
+                'details' => NULL,
                 'order' => 3,
             ),
-            14 =>
+            14 => 
             array (
                 'id' => 15,
                 'data_type_id' => 2,
@@ -256,10 +256,10 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 0,
                 'add' => 0,
                 'delete' => 0,
-                'details' => null,
+                'details' => NULL,
                 'order' => 4,
             ),
-            15 =>
+            15 => 
             array (
                 'id' => 16,
                 'data_type_id' => 3,
@@ -275,7 +275,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            16 =>
+            16 => 
             array (
                 'id' => 17,
                 'data_type_id' => 3,
@@ -291,7 +291,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            17 =>
+            17 => 
             array (
                 'id' => 18,
                 'data_type_id' => 3,
@@ -307,7 +307,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            18 =>
+            18 => 
             array (
                 'id' => 19,
                 'data_type_id' => 3,
@@ -323,7 +323,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            19 =>
+            19 => 
             array (
                 'id' => 20,
                 'data_type_id' => 3,
@@ -339,7 +339,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            20 =>
+            20 => 
             array (
                 'id' => 21,
                 'data_type_id' => 1,
@@ -355,7 +355,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 9,
             ),
-            21 =>
+            21 => 
             array (
                 'id' => 22,
                 'data_type_id' => 1,
@@ -371,7 +371,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            22 =>
+            22 => 
             array (
                 'id' => 23,
                 'data_type_id' => 4,
@@ -387,7 +387,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            23 =>
+            23 => 
             array (
                 'id' => 24,
                 'data_type_id' => 4,
@@ -403,7 +403,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            24 =>
+            24 => 
             array (
                 'id' => 25,
                 'data_type_id' => 4,
@@ -419,7 +419,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:14|min:13","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 3,
             ),
-            25 =>
+            25 => 
             array (
                 'id' => 26,
                 'data_type_id' => 4,
@@ -435,7 +435,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 6,
             ),
-            26 =>
+            26 => 
             array (
                 'id' => 27,
                 'data_type_id' => 4,
@@ -451,7 +451,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            27 =>
+            27 => 
             array (
                 'id' => 28,
                 'data_type_id' => 4,
@@ -467,7 +467,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            28 =>
+            28 => 
             array (
                 'id' => 29,
                 'data_type_id' => 4,
@@ -483,7 +483,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 9,
             ),
-            29 =>
+            29 => 
             array (
                 'id' => 30,
                 'data_type_id' => 4,
@@ -499,7 +499,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:16|min:15","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 4,
             ),
-            30 =>
+            30 => 
             array (
                 'id' => 31,
                 'data_type_id' => 4,
@@ -515,7 +515,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:18|min:17","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max.","min":"El campo :attribute acepta m\\u00ednimo :min."}}}',
                 'order' => 5,
             ),
-            31 =>
+            31 => 
             array (
                 'id' => 32,
                 'data_type_id' => 5,
@@ -531,7 +531,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            32 =>
+            32 => 
             array (
                 'id' => 33,
                 'data_type_id' => 5,
@@ -547,7 +547,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            33 =>
+            33 => 
             array (
                 'id' => 34,
                 'data_type_id' => 5,
@@ -563,7 +563,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:25","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 3,
             ),
-            34 =>
+            34 => 
             array (
                 'id' => 35,
                 'data_type_id' => 5,
@@ -579,7 +579,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required","messages":{"required":"El campo :attribute es requerido."}}}',
                 'order' => 4,
             ),
-            35 =>
+            35 => 
             array (
                 'id' => 36,
                 'data_type_id' => 5,
@@ -595,7 +595,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            36 =>
+            36 => 
             array (
                 'id' => 37,
                 'data_type_id' => 5,
@@ -611,23 +611,23 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            37 =>
+            37 => 
             array (
                 'id' => 38,
                 'data_type_id' => 5,
                 'field' => 'deleted_at',
                 'type' => 'timestamp',
-                'display_name' => 'Deleted At',
+                'display_name' => 'Eliminado',
                 'required' => 0,
-                'browse' => 0,
-                'read' => 0,
+                'browse' => 1,
+                'read' => 1,
                 'edit' => 0,
                 'add' => 0,
-                'delete' => 0,
+                'delete' => 1,
                 'details' => '{}',
                 'order' => 7,
             ),
-            38 =>
+            38 => 
             array (
                 'id' => 39,
                 'data_type_id' => 6,
@@ -643,7 +643,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            39 =>
+            39 => 
             array (
                 'id' => 40,
                 'data_type_id' => 6,
@@ -659,7 +659,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"required|max:30","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute acepta maximo :max."}}}',
                 'order' => 2,
             ),
-            40 =>
+            40 => 
             array (
                 'id' => 41,
                 'data_type_id' => 6,
@@ -675,7 +675,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 3,
             ),
-            41 =>
+            41 => 
             array (
                 'id' => 42,
                 'data_type_id' => 6,
@@ -691,13 +691,93 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            42 =>
+            42 => 
             array (
                 'id' => 43,
                 'data_type_id' => 6,
                 'field' => 'deleted_at',
                 'type' => 'timestamp',
-                'display_name' => 'Deleted At',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 5,
+            ),
+            43 => 
+            array (
+                'id' => 44,
+                'data_type_id' => 7,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            44 => 
+            array (
+                'id' => 45,
+                'data_type_id' => 7,
+                'field' => 'name',
+                'type' => 'text',
+                'display_name' => 'Nombre',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 2,
+            ),
+            45 => 
+            array (
+                'id' => 46,
+                'data_type_id' => 7,
+                'field' => 'description',
+                'type' => 'text',
+                'display_name' => 'Descripción',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"max:100","messages":{"max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 3,
+            ),
+            46 => 
+            array (
+                'id' => 47,
+                'data_type_id' => 7,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 4,
+            ),
+            47 => 
+            array (
+                'id' => 48,
+                'data_type_id' => 7,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
                 'required' => 0,
                 'browse' => 0,
                 'read' => 0,
@@ -707,6 +787,744 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
+            48 => 
+            array (
+                'id' => 49,
+                'data_type_id' => 7,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
+            ),
+            49 => 
+            array (
+                'id' => 50,
+                'data_type_id' => 8,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            50 => 
+            array (
+                'id' => 51,
+                'data_type_id' => 8,
+                'field' => 'name',
+                'type' => 'text',
+                'display_name' => 'Nombre',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 2,
+            ),
+            51 => 
+            array (
+                'id' => 52,
+                'data_type_id' => 8,
+                'field' => 'address',
+                'type' => 'text',
+                'display_name' => 'Dirección',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"max:50","messages":{"max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 3,
+            ),
+            52 => 
+            array (
+                'id' => 53,
+                'data_type_id' => 8,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 4,
+            ),
+            53 => 
+            array (
+                'id' => 54,
+                'data_type_id' => 8,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 5,
+            ),
+            54 => 
+            array (
+                'id' => 55,
+                'data_type_id' => 8,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
+            ),
+            55 => 
+            array (
+                'id' => 56,
+                'data_type_id' => 9,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            56 => 
+            array (
+                'id' => 57,
+                'data_type_id' => 9,
+                'field' => 'name',
+                'type' => 'text',
+                'display_name' => 'Nombre',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 2,
+            ),
+            57 => 
+            array (
+                'id' => 58,
+                'data_type_id' => 9,
+                'field' => 'symbol',
+                'type' => 'text',
+                'display_name' => 'Simbolo',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:10","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 3,
+            ),
+            58 => 
+            array (
+                'id' => 59,
+                'data_type_id' => 9,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 4,
+            ),
+            59 => 
+            array (
+                'id' => 60,
+                'data_type_id' => 9,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 5,
+            ),
+            60 => 
+            array (
+                'id' => 61,
+                'data_type_id' => 9,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
+            ),
+            61 => 
+            array (
+                'id' => 62,
+                'data_type_id' => 10,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'N°',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            62 => 
+            array (
+                'id' => 63,
+                'data_type_id' => 10,
+                'field' => 'name',
+                'type' => 'text',
+                'display_name' => 'Nombre',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:80","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 2,
+            ),
+            63 => 
+            array (
+                'id' => 64,
+                'data_type_id' => 10,
+                'field' => 'description',
+                'type' => 'text_area',
+                'display_name' => 'Descripción',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:250","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 3,
+            ),
+            64 => 
+            array (
+                'id' => 65,
+                'data_type_id' => 10,
+                'field' => 'price',
+                'type' => 'number',
+                'display_name' => 'Precio',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|min:1|numeric","messages":{"required":"El campo :attribute es requerido.","min":"El campo :attribute admite como m\\u00ednimo :min"}}}',
+                'order' => 4,
+            ),
+            65 => 
+            array (
+                'id' => 66,
+                'data_type_id' => 10,
+                'field' => 'stock_min',
+                'type' => 'number',
+                'display_name' => 'Cantidad mínima',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|min:1|numeric","messages":{"required":"El campo :attribute es requerido.","min":"El campo :attribute admite como m\\u00ednimo :min"}}}',
+                'order' => 5,
+            ),
+            66 => 
+            array (
+                'id' => 67,
+                'data_type_id' => 10,
+                'field' => 'productCode',
+                'type' => 'text',
+                'display_name' => 'Código del producto',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
+            ),
+            67 => 
+            array (
+                'id' => 68,
+                'data_type_id' => 10,
+                'field' => 'unitCode',
+                'type' => 'text',
+                'display_name' => 'Código de unidad',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 7,
+            ),
+            68 => 
+            array (
+                'id' => 69,
+                'data_type_id' => 10,
+                'field' => 'category_id',
+                'type' => 'text',
+                'display_name' => 'Category Id',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 8,
+            ),
+            69 => 
+            array (
+                'id' => 70,
+                'data_type_id' => 10,
+                'field' => 'unit_id',
+                'type' => 'text',
+                'display_name' => 'Unit Id',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 9,
+            ),
+            70 => 
+            array (
+                'id' => 71,
+                'data_type_id' => 10,
+                'field' => 'image',
+                'type' => 'image',
+                'display_name' => 'Imagen',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"mimes:png,jpg|max:5000","messages":{"mimes":"Se permiten archivos PNG, JPG","max":"Se permiten archivos de tama\\u00f1o de hasta 5 MB"}}}',
+                'order' => 10,
+            ),
+            71 => 
+            array (
+                'id' => 72,
+                'data_type_id' => 10,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 13,
+            ),
+            72 => 
+            array (
+                'id' => 73,
+                'data_type_id' => 10,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 14,
+            ),
+            73 => 
+            array (
+                'id' => 74,
+                'data_type_id' => 10,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 15,
+            ),
+            74 => 
+            array (
+                'id' => 75,
+                'data_type_id' => 10,
+                'field' => 'product_belongsto_category_relationship',
+                'type' => 'relationship',
+                'display_name' => 'Categoría',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Models\\\\Category","table":"categories","type":"belongsTo","column":"category_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'order' => 11,
+            ),
+            75 => 
+            array (
+                'id' => 76,
+                'data_type_id' => 10,
+                'field' => 'product_belongsto_unit_relationship',
+                'type' => 'relationship',
+                'display_name' => 'Unidad de medida',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Models\\\\Unit","table":"units","type":"belongsTo","column":"unit_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'order' => 12,
+            ),
+            76 => 
+            array (
+                'id' => 77,
+                'data_type_id' => 11,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            77 => 
+            array (
+                'id' => 78,
+                'data_type_id' => 11,
+                'field' => 'name',
+                'type' => 'text',
+                'display_name' => 'Movimiento',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:50","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 2,
+            ),
+            78 => 
+            array (
+                'id' => 79,
+                'data_type_id' => 11,
+                'field' => 'description',
+                'type' => 'text',
+                'display_name' => 'Descripción',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:100","messages":{"required":"El campo :attribute es requerido.","max":"El campo :attribute admite maximo :max caracteres."}}}',
+                'order' => 3,
+            ),
+            79 => 
+            array (
+                'id' => 80,
+                'data_type_id' => 11,
+                'field' => 'type',
+                'type' => 'select_dropdown',
+                'display_name' => 'Tipo',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"default":"E","options":{"E":"Entrada","S":"Salida","T":"Traspaso"}}',
+                'order' => 4,
+            ),
+            80 => 
+            array (
+                'id' => 81,
+                'data_type_id' => 11,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 5,
+            ),
+            81 => 
+            array (
+                'id' => 82,
+                'data_type_id' => 11,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 6,
+            ),
+            82 => 
+            array (
+                'id' => 83,
+                'data_type_id' => 11,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 7,
+            ),
+            83 => 
+            array (
+                'id' => 84,
+                'data_type_id' => 12,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            84 => 
+            array (
+                'id' => 85,
+                'data_type_id' => 12,
+                'field' => 'product_id',
+                'type' => 'text',
+                'display_name' => 'Product Id',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 2,
+            ),
+            85 => 
+            array (
+                'id' => 86,
+                'data_type_id' => 12,
+                'field' => 'office_id',
+                'type' => 'text',
+                'display_name' => 'Office Id',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 5,
+            ),
+            86 => 
+            array (
+                'id' => 87,
+                'data_type_id' => 12,
+                'field' => 'stock',
+                'type' => 'text',
+                'display_name' => 'Cantidad disponible',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 4,
+            ),
+            87 => 
+            array (
+                'id' => 88,
+                'data_type_id' => 12,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Registrado',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 7,
+            ),
+            88 => 
+            array (
+                'id' => 89,
+                'data_type_id' => 12,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 8,
+            ),
+            89 => 
+            array (
+                'id' => 90,
+                'data_type_id' => 12,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 9,
+            ),
+            90 => 
+            array (
+                'id' => 91,
+                'data_type_id' => 12,
+                'field' => 'inventory_belongsto_product_relationship',
+                'type' => 'relationship',
+                'display_name' => 'Producto',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Models\\\\Product","table":"products","type":"belongsTo","column":"product_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'order' => 3,
+            ),
+            91 => 
+            array (
+                'id' => 92,
+                'data_type_id' => 12,
+                'field' => 'inventory_belongsto_office_relationship',
+                'type' => 'relationship',
+                'display_name' => 'Sucursal',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Models\\\\Office","table":"offices","type":"belongsTo","column":"office_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
+                'order' => 6,
+            ),
+            92 => 
+            array (
+                'id' => 93,
+                'data_type_id' => 1,
+                'field' => 'api_token',
+                'type' => 'text',
+                'display_name' => 'Api Token',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 10,
+            ),
+            93 => 
+            array (
+                'id' => 94,
+                'data_type_id' => 1,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Eliminado',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 13,
+            ),
         ));
+        
+        
     }
 }
