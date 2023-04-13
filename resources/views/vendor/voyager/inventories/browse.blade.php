@@ -543,7 +543,7 @@
             }
         });
         $.ajax({
-            url:"/api/inventory/movements/1",
+            url:"/api/v1/inventories/movements/1",
             type: 'GET',
             dataType:'json',
             success:function(response){
@@ -604,7 +604,7 @@
         //sucursals
         let offices;
         $.ajax({
-            url:"/api/v1.0/inventories/offices",
+            url:"/api/v1/inventories/offices",
             type: 'GET',
             dataType:'json',
             success:function(response){
@@ -654,7 +654,7 @@
             }
         });
         $.ajax({
-            url:"/api/v1.0/inventories/movements/2",
+            url:"/api/v1/inventories/movements/2",
             type: 'GET',
             dataType:'json',
             success:function(response){
