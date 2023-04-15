@@ -21,7 +21,7 @@ class InventoryController extends Controller
             $response['data'] = $movements;
         } catch (Exception $ex) {
             $response['status'] = 500;
-            $response['message'] = 'Ocurrió el error siguiente: '.$ex->getMessage();
+            $response['message'] = 'Ocurrió el siguiente error: '.$ex->getMessage();
         }
         return $response;
     }
