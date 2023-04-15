@@ -19,7 +19,7 @@ class RolesTableSeeder extends Seeder
         \DB::table('roles')->delete();
         
         \DB::table('roles')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'name' => 'support',
@@ -27,7 +27,7 @@ class RolesTableSeeder extends Seeder
                 'created_at' => '2022-11-09 13:18:29',
                 'updated_at' => '2022-11-09 14:03:47',
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 2,
                 'name' => 'admin',
@@ -35,6 +35,16 @@ class RolesTableSeeder extends Seeder
                 'created_at' => '2022-11-09 13:18:29',
                 'updated_at' => '2022-11-09 14:06:03',
             ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'customer',
+                'display_name' => 'Cliente',
+                'created_at' => '2023-04-13 21:21:09',
+                'updated_at' => '2023-04-13 21:21:09',
+            ),
         ));
+        
+        
     }
 }

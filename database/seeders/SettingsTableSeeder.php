@@ -7,76 +7,19 @@ use TCG\Voyager\Models\Setting;
 
 class SettingsTableSeeder extends Seeder
 {
+
     /**
-     * Auto generated seed file.
+     * Auto generated seed file
+     *
+     * @return void
      */
     public function run()
     {
-        $setting = $this->findSetting('site.title');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.site.title'),
-                'value'        => __('voyager::seeders.settings.site.title'),
-                'details'      => '',
-                'type'         => 'text',
-                'order'        => 1,
-                'group'        => 'Site',
-            ])->save();
-        }
-
-        $setting = $this->findSetting('site.description');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.site.description'),
-                'value'        => __('voyager::seeders.settings.site.description'),
-                'details'      => '',
-                'type'         => 'text',
-                'order'        => 2,
-                'group'        => 'Site',
-            ])->save();
-        }
-
-        $setting = $this->findSetting('site.logo');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.site.logo'),
-                'value'        => '',
-                'details'      => '',
-                'type'         => 'image',
-                'order'        => 3,
-                'group'        => 'Site',
-            ])->save();
-        }
-
-        $setting = $this->findSetting('site.google_analytics_tracking_id');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.site.google_analytics_tracking_id'),
-                'value'        => '',
-                'details'      => '',
-                'type'         => 'text',
-                'order'        => 4,
-                'group'        => 'Site',
-            ])->save();
-        }
-
-        $setting = $this->findSetting('admin.bg_image');
-        if (!$setting->exists) {
-            $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.background_image'),
-                'value'        => '',
-                'details'      => '',
-                'type'         => 'image',
-                'order'        => 5,
-                'group'        => 'Admin',
-            ])->save();
-        }
-
         $setting = $this->findSetting('admin.title');
         if (!$setting->exists) {
             $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.title'),
-                'value'        => 'Voyager',
+                'display_name' => 'Nombre de la empresa',
+                'value'        => 'Empresa o Negocio',
                 'details'      => '',
                 'type'         => 'text',
                 'order'        => 1,
@@ -87,8 +30,8 @@ class SettingsTableSeeder extends Seeder
         $setting = $this->findSetting('admin.description');
         if (!$setting->exists) {
             $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.description'),
-                'value'        => __('voyager::seeders.settings.admin.description_value'),
+                'display_name' => 'Eslogan o descripción de la empresa',
+                'value'        => 'Descripción de la empresa',
                 'details'      => '',
                 'type'         => 'text',
                 'order'        => 2,
@@ -112,7 +55,7 @@ class SettingsTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => __('voyager::seeders.settings.admin.icon_image'),
-                'value'        => '',
+                'value'        => NULL,
                 'details'      => '',
                 'type'         => 'image',
                 'order'        => 4,
@@ -120,14 +63,62 @@ class SettingsTableSeeder extends Seeder
             ])->save();
         }
 
-        $setting = $this->findSetting('admin.google_analytics_client_id');
+        $setting = $this->findSetting('admin.bg_image');
         if (!$setting->exists) {
             $setting->fill([
-                'display_name' => __('voyager::seeders.settings.admin.google_analytics_client_id'),
-                'value'        => '',
+                'display_name' => __('voyager::seeders.settings.admin.background_image'),
+                'value'        => NULL,
+                'details'      => '',
+                'type'         => 'image',
+                'order'        => 5,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('admin.address');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Dirección de la empresa',
+                'value'        => '#',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 1,
+                'order'        => 6,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('admin.email');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Correo electrónico de contacto',
+                'value'        => 'example@gmail.com',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 7,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('admin.phone');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Número de whatsapp de contacto',
+                'value'        => '###-###-####',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 8,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('admin.policies');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Políticas de la empresa',
+                'value'        => '<div><div><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Aspernatur, nulla eum libero officiis iste, blanditiis eos fugiat perspiciatis eius sint labore quia veritatis autem quod placeat porro, deleniti earum. Molestiae?</div></div>',
+                'details'      => '',
+                'type'         => 'rich_text_box',
+                'order'        => 9,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -143,5 +134,5 @@ class SettingsTableSeeder extends Seeder
     protected function findSetting($key)
     {
         return Setting::firstOrNew(['key' => $key]);
-    }
+    }   
 }

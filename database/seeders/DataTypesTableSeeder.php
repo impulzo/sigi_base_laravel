@@ -235,6 +235,24 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2023-04-09 21:40:15',
                 'updated_at' => '2023-04-12 21:15:01',
             ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'customers',
+                'slug' => 'customers',
+                'display_name_singular' => 'Cliente',
+                'display_name_plural' => 'Clientes',
+                'icon' => 'voyager-people',
+                'model_name' => 'App\\Models\\Customer',
+                'policy_name' => NULL,
+                'controller' => 'App\\Http\\Controllers\\CustomerController',
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2023-04-12 23:37:46',
+                'updated_at' => '2023-04-13 21:42:58',
+            ),
         ));
         
         

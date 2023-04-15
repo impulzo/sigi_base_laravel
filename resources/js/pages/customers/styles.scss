@@ -1,0 +1,48 @@
+//block__element--modifier
+.select--with {
+    width: 100%;
+    padding: 5px;
+}
+
+.tabs {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template: auto / 25% 25% 25% 25%;
+    margin-bottom: -5px;
+}
+
+.tab {
+    label {
+        background: #eee;
+        padding: 10px 30px;
+        border: 1px solid #ccc;
+        margin-left: -1px;
+        position: relative;
+        left: 1px;
+        cursor: pointer;
+        width: 100%;
+    }
+    i {
+        vertical-align: middle;
+    }
+}
+
+.div__step--active {
+    label {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+        z-index: 2;
+        color: #000;
+        font-size: 16px;
+    }
+}
+
+.div__content {
+    background: white;
+    overflow: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
