@@ -1,7 +1,7 @@
-export interface IProps {
+export interface chartOptions {
     data: {
         labels: Array<string>,
-        datasets: Array<IData>
+        datasets: Array<chartData>
     },
     options: {
         responsive: boolean,
@@ -14,7 +14,7 @@ export interface IProps {
     }
 }
 
-export interface IData {
+export interface chartData {
     label: string,
     data: Array<number>,
     backgroundColor: Array<string>,

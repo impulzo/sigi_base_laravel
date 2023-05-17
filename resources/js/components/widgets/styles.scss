@@ -1,0 +1,70 @@
+.div__card--green {
+    background: rgb(147, 223, 148);
+    background: linear-gradient(90deg, rgba(147, 223, 148, 1) 0%, rgba(94, 200, 90, 1) 66%);
+    color: white;
+
+    span {
+        background: rgba(147, 223, 148, 0.9);
+    }
+}
+
+.div__card--blue {
+    background: rgb(179, 186, 255);
+    background: linear-gradient(90deg, rgba(179, 186, 255, 1) 0%, rgba(125, 143, 255, 1) 66%);
+    color: white;
+
+    span {
+        background: rgba(179, 186, 255, 0.9);
+    }
+}
+
+.div__card--orange {
+    background: rgb(255, 204, 149);
+    background: linear-gradient(90deg, rgba(255, 204, 149, 1) 0%, rgba(255, 112, 67, 1) 66%);
+    color: white;
+
+    span {
+        background: rgba(255, 204, 149, 0.9);
+    }
+}
+
+.div__card--teal {
+    background: rgb(182, 225, 221);
+    background: linear-gradient(90deg, rgba(182, 225, 221, 1) 0%, rgba(38, 166, 154, 1) 66%);
+    color: white;
+
+    span {
+        background: rgba(182, 225, 221, 0.9);
+    }
+}
+
+.div__card--shape {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 120px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+
+    span {
+        border-radius: 8px;
+        font-size: 34px;
+    }
+}
+
+.div--margin {
+    margin: auto !important;
+}
+
+.div--padding {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.div__title--size {
+    margin-bottom: 0.25rem !important;
+    font-size: 16px;
+}

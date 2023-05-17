@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { IProps } from "./IProps";
+import { chartOptions } from "./Props";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -22,7 +22,7 @@ ChartJS.register(
     Legend
 );
 
-const LineChart = (props: IProps) => {
+const LineChart = (props: chartOptions) => {
     return (<Line data={props.data} options={props.options} height={100} />)
 }
 
