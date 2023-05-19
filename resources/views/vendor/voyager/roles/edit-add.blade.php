@@ -61,7 +61,7 @@
                                     $role_permissions = (isset($dataTypeContent)) ? $dataTypeContent->permissions->pluck('key')->toArray() : [];
                                 ?>
                                 @foreach(Voyager::model('Permission')->all()->groupBy('table_name') as $table => $permission)
-                                  @if($table == 'menus' || $table == 'settings')
+                                  @if((in_array($table, ['menus','settings','transfer_data','modules','payment_methods','offices','units','products','movement_types','inventories'])) && Auth::user()->role->id != 1)
                                     @continue
                                   @endif
                                     <li>
@@ -69,12 +69,14 @@
                                         <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title(str_replace('_',' ', $table))}}</strong></label>
                                         <ul>
                                             @foreach($permission as $perm)
-                                                @if($perm->key == 'browse_admin' && Auth::user()->role->id !=1)
+                                                @if($perm->key == 'browse_admin' && Auth::user()->role->id != 1)
                                                   <li>
                                                       <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" checked readonly>
                                                       <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title(str_replace('_', ' ', $perm->key))}}</label>
                                                   </li>
                                                   @break
+                                                @elseif($perm->key == 'delete_roles' && Auth::user()->role->id != 1)
+                                                    @continue
                                                 @endif
                                                 <li>
                                                   <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" @if(in_array($perm->key, $role_permissions)) checked @endif>
