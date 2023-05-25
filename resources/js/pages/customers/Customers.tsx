@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Personal from './components/Personal';
 import Tax from './components/Tax';
 import User from './components/User';
-import { IState } from './props/props';
+import { Customer } from './Props';
 import Step from './components/Step';
 import './styles.scss';
 
@@ -16,7 +16,7 @@ const customer = app?.getAttribute('data-customer');
 
 const Customers = () => {
 
-    const [state, setState] = useState<IState>({
+    const [state, setState] = useState<Customer>({
         api_token: api_token,
         _token: csrf,
         id: 0,
@@ -38,7 +38,7 @@ const Customers = () => {
     useEffect(() => {
         if (edit == "1") {
             try {
-                let data: IState = JSON.parse(customer ?? "{}");
+                let data: Customer = JSON.parse(customer ?? "{}");
                 setState((prevState) => {
                     return { ...prevState, ...data };
                 });
@@ -50,7 +50,7 @@ const Customers = () => {
 
     const [step, setStep] = useState<number>(1);
 
-    const updateFields = (fields: Partial<IState>) => {
+    const updateFields = (fields: Partial<Customer>) => {
         setState(state => {
             return { ...state, ...fields }
         })

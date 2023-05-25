@@ -1,4 +1,4 @@
-export interface IState {
+export interface Customer {
     api_token: any,
     _token: any,
     id: number,
@@ -20,6 +20,6 @@ export interface IState {
 export interface IProps {
     nextStep: Function,
     prevStep: Function,
-    handleChange: (fields: Partial<IState>) => void,
-    values: Partial<IState>
+    handleChange: (fields: Partial<Customer>) => void,
+    values: Partial<Customer>
 }
