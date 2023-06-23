@@ -1,7 +1,7 @@
-export interface chartOptions {
+export interface ChartOptions {
     data: {
         labels: Array<string>,
-        datasets: Array<chartData>
+        datasets: Array<ChartData>
     },
     options: {
         responsive: boolean,
@@ -14,7 +14,7 @@ export interface chartOptions {
     }
 }
 
-export interface chartData {
+export interface ChartData {
     label: string,
     data: Array<number>,
     backgroundColor: Array<string>,

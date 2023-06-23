@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from "react";
-import { IProps } from "../props/props";
+import { IProps } from "../Props";
 import axios from 'axios';
 
 const User = (props: IProps) => {

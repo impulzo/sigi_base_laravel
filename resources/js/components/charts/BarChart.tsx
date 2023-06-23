@@ -9,7 +9,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Bar } from "react-chartjs-2";
-import { chartOptions } from "./Props";
+import { ChartOptions } from "./Props";
 
 ChartJS.register(
     CategoryScale,
@@ -20,7 +20,7 @@ ChartJS.register(
     Legend
 );
 
-const BarChart = (props: chartOptions) => {
+const BarChart = (props: ChartOptions) => {
     return (<Bar data={props.data} options={props.options} height={120} />)
 }
 
