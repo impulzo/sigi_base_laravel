@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOfficesTable extends Migration
+class CreateInvoicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateOfficesTable extends Migration
      */
     public function up()
     {
-        Schema::create('offices', function (Blueprint $table) {
+        Schema::create('invoices', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',50);
-            $table->string('address',150)->nullable();
+            $table->integer('customer_id');
+            $table->integer('invoice_id');
+            $table->string('link_pdf');
+            $table->string('link_xml');
+            $table->text('products');
+            $table->integer('user_id');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +32,6 @@ class CreateOfficesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('offices');
+        Schema::dropIfExists('invoices');
     }
 }

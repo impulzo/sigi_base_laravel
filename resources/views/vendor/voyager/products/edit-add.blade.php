@@ -67,7 +67,7 @@
                                     <legend class="text-{{ $row->details->legend->align ?? 'center' }}" style="background-color: {{ $row->details->legend->bgcolor ?? '#f0f0f0' }};padding: 5px;">{{ $row->details->legend->text }}</legend>
                                 @endif
 
-                                <div class="form-group @if($row->type == 'hidden') hidden @endif col-md-{{ $display_options->width ?? 12 }} {{ $errors->has($row->field) ? 'has-error' : '' }}" @if(isset($display_options->id)){{ "id=$display_options->id" }}@endif>
+                                <div class="form-group @if($row->type == 'hidden') hidden @endif col-md-{{ $display_options->width ?? 6 }} {{ $errors->has($row->field) ? 'has-error' : '' }}" @if(isset($display_options->id)){{ "id=$display_options->id" }}@endif>
                                     {{ $row->slugify }}
                                     <label class="control-label" for="name">{{ $row->getTranslatedAttribute('display_name') }}</label>
                                     @include('voyager::multilingual.input-hidden-bread-edit-add')
@@ -79,14 +79,14 @@
                                         @include($row->details->view, ['row' => $row, 'dataType' => $dataType, 'dataTypeContent' => $dataTypeContent, 'content' => $dataTypeContent->{$row->field}, 'action' => ($edit ? 'edit' : 'add'), 'view' => ($edit ? 'edit' : 'add'), 'options' => $row->details])
                                     @elseif ($row->type == 'relationship')
                                         @include('voyager::formfields.relationship', ['options' => $row->details])
-                                    @elseif($row->field == "productCode")
+                                    @elseif($row->field == "product_code")
                                         <select class="form-control select2" 
-                                            name="productCode" id="productCode" >
+                                            name="product_code" id="product_code" required>
                                             <option value selected>Ninguno</option>
                                         </select>
-                                    @elseif($row->field == "unitCode")
+                                    @elseif($row->field == "unit_code")
                                         <select class="form-control select2" 
-                                            name="unitCode" id="unitCode" >
+                                            name="unit_code" id="unit_code" required>
                                             <option value selected>Ninguno</option>
                                         </select>
                                     @else
@@ -219,35 +219,54 @@
             });
             $('[data-toggle="tooltip"]').tooltip();
 
+            const product_code = '{{$dataTypeContent->product_code}}';
             $.ajax({
                 type: "GET",
                 url: "{{env('INVOICE_IMPULZO_IP')}}/api/v1/catalogs/products_or_services?keyword=const",
                 dataType:"json",
                 success : function (response)
                 {
-                    var options = '<option value selected>Ninguno</option>';
+                    let flag = false;
+                    var options = '';
                     if (response.length > 0) {
                         response.forEach(x => {
-                            options += '<option value="'+x.Value+'">'+x.Name+'</option>'
+                            if(product_code == x.Value){
+                                options += '<option value="'+x.Value+'" selected>'+x.Name+'</option>';
+                                flag = true;
+                            }else{
+                                options += '<option value="'+x.Value+'">'+x.Name+'</option>'
+                            }
                         });
+                        if(!flag){
+                            options += '<option value selected>Ninguno</option>';
+                        }
                     }
-                    $('#productCode').html(options);
+                    $('#product_code').html(options);
                 }
             });
-
+            const unit_code = "{{$dataTypeContent->unit_code}}";
             $.ajax({
                 type: "GET",
                 url: "{{env('INVOICE_IMPULZO_IP')}}/api/v1/catalogs/units?keyword=G",
                 dataType:"json",
                 success : function (response)
                 {
-                    var options = '<option value selected>Ninguno</option>';
+                    let flag = false;
+                    var options = '';
                     if (response.length > 0) {
                         response.forEach(x => {
-                            options += '<option value="'+x.Value+'">'+x.Name+'</option>'
+                            if(unit_code == x.Value){
+                                options += '<option value="'+x.Value+'" selected>'+x.Name+'</option>';
+                                flag = true;
+                            }else{
+                                options += '<option value="'+x.Value+'">'+x.Name+'</option>'
+                            }
                         });
+                        if(!flag){
+                            options += '<option value selected>Ninguno</option>';
+                        }
                     }
-                    $('#unitCode').html(options);
+                    $('#unit_code').html(options);
                 }
             });
         });

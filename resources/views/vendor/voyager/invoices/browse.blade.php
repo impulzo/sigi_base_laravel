@@ -15,8 +15,6 @@
         @can('delete', app($dataType->model_name))
             @include('voyager::partials.bulk-delete')
         @endcan
-        <a class="btn btn-info" id="bulk_inventory_btn"><i class="voyager-params"></i> <span>Movimiento</span></a>
-        <a class="btn btn-warning" id="bulk_transfer_btn"><i class="voyager-external"></i> <span>Traspaso</span></a>
         @can('edit', app($dataType->model_name))
             @if(!empty($dataType->order_column) && !empty($dataType->order_display_column))
                 <a href="{{ route('voyager.'.$dataType->slug.'.order') }}" class="btn btn-primary btn-add-new">
@@ -80,9 +78,11 @@
                             <table id="dataTable" class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th class="dt-not-orderable">
-                                            <input type="checkbox" class="select_all">
-                                        </th>
+                                        @if($showCheckboxColumn)
+                                            <th class="dt-not-orderable">
+                                                <input type="checkbox" class="select_all">
+                                            </th>
+                                        @endif
                                         @foreach($dataType->browseRows as $row)
                                         <th>
                                             @if ($isServerSide && in_array($row->field, $sortableColumns))
@@ -107,9 +107,11 @@
                                 <tbody>
                                     @foreach($dataTypeContent as $data)
                                     <tr>
-                                        <td>
-                                            <input type="checkbox" name="row_id" id="checkbox_{{ $data->getKey() }}" value="{{ $data->getKey() }}">
-                                        </td>
+                                        @if($showCheckboxColumn)
+                                            <td>
+                                                <input type="checkbox" name="row_id" id="checkbox_{{ $data->getKey() }}" value="{{ $data->getKey() }}">
+                                            </td>
+                                        @endif
                                         @foreach($dataType->browseRows as $row)
                                             @php
                                             if ($data->{$row->field.'_browse'}) {
@@ -255,7 +257,7 @@
                                                 @if (!method_exists($action, 'massAction'))
                                                     @include('voyager::bread.partials.actions', ['action' => $action])
                                                 @endif
-                                            @endforeach  
+                                            @endforeach
                                         </td>
                                     </tr>
                                     @endforeach
@@ -294,7 +296,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="{{ __('voyager::generic.close') }}"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title"><i class="voyager-trash"></i> {{ __('voyager::generic.delete_question') }} {{ strtolower($dataType->getTranslatedAttribute('display_name_singular')) }}?</h4>
+                    <h4 class="modal-title"><i class="voyager-trash"></i> ¿Está seguro de cancelar la {{ strtolower($dataType->getTranslatedAttribute('display_name_singular')) }}?</h4>
                 </div>
                 <div class="modal-footer">
                     <form action="#" id="delete_form" method="POST">
@@ -307,114 +309,6 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
-    {{-- Movement modal --}}
-    <div class="modal modal-success fade" tabindex="-1" id="bulk_inventory_modal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">
-                        <i class="voyager-params"></i> ¿Está seguro de realizar este movimiento en <span id="bulk_inventory_count"></span> <span id="bulk_inventory_display_name"></span>?
-                    </h4>
-                </div>
-                <form action="{{ route('voyager.inventories.store') }}" id="bulk_inventory_form" method="POST">
-                    {{ csrf_field() }}
-                    <div class="modal-body" id="bulk_inventory_modal_body">
-                        <input type="hidden" id="bulk_inventory_input" value="">
-                        <input type="hidden" name="json" id="json" value="">
-                        <div class="form-group">
-                            <label for="movement_types_id" class="control-label">Movimiento</label>
-                            <select class="form-control select2" name="movement_types_id" id="movement_types_id" required>
-                                
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="movement_date" class="control-label">Fecha </label>
-                            <input type="date" class="form-control" name="movement_date" id="movement_date" value="" required />
-                        </div>
-                        <div class="form-group">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th>Producto</th>
-                                    <th>Sucursal</th>
-                                    <th>Cantidad</th>
-                                    <th>Notas</th>
-                                </thead>
-                                <tbody id="movements">
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                            <input type="submit" class="btn btn-success pull-right inventory-confirm"
-                                    value="Confirmar movimiento en {{ strtolower($dataType->getTranslatedAttribute('display_name_plural')) }}">
-                        
-                        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">
-                            {{ __('voyager::generic.cancel') }}
-                        </button>
-                    </div>
-                </form>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    {{-- Transfer modal --}}
-    <div class="modal modal-warning fade" tabindex="-1" id="bulk_transfer_modal" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">
-                        <i class="voyager-params"></i> ¿Está seguro de realizar el traspaso entre sucursales en <span id="bulk_transfer_count"></span> <span id="bulk_transfer_display_name"></span>?
-                    </h4>
-                </div>
-                <form action="{{ route('voyager.inventories.store') }}" id="bulk_transfer_form" method="POST">
-                    {{ csrf_field() }}
-                    <div class="modal-body" id="bulk_transfer_modal_body">
-                        <input type="hidden" id="bulk_transfer_input" value="">
-                        <input type="hidden" name="json" id="json_transfer" value="">
-                        <div class="form-group">
-                            <label for="movement_types_id_transfer" class="control-label">Movimiento</label>
-                            <select class="form-control select2" name="movement_types_id" id="movement_types_id_transfer" style="width: 100%" required>
-                                
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="movement_date_transfer" class="control-label">Fecha </label>
-                            <input type="date" class="form-control" name="movement_date" id="movement_date_transfer" value="" required />
-                        </div>
-                        <div class="form-group">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <th style="width: 17%">Producto</th>
-                                    <th style="width: 17%">Sucursal</th>
-                                    <th style="width: 17%">Cantidad</th>
-                                    <th style="width: 27%">Notas</th>
-                                    <th style="width: 22%">Traspasar a</th>
-                                </thead>
-                                <tbody id="movements_transfer">
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                            <input type="submit" class="btn btn-success pull-right transfer-confirm"
-                                    value="Confirmar movimiento en {{ strtolower($dataType->getTranslatedAttribute('display_name_plural')) }}">
-                        
-                        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">
-                            {{ __('voyager::generic.cancel') }}
-                        </button>
-                    </div>
-                </form>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    
 @stop
 
 @section('css')
@@ -498,212 +392,4 @@
             $('.selected_ids').val(ids);
         });
     </script>
-    {{-- script for modal inventory --}}
-    <script>
-        
-        // Bulk delete selectors
-        var $bulkInventoryBtn = $('#bulk_inventory_btn');
-        var $bulkInventoryModal = $('#bulk_inventory_modal');
-        var $bulkInventoryCount = $('#bulk_inventory_count');
-        var $bulkInventoryDisplayName = $('#bulk_inventory_display_name');
-        var $bulkInventoryInput = $('#bulk_inventory_input');
-        // Reposition modal to prevent z-index issues
-        $bulkInventoryModal.appendTo('body');
-        // Bulk delete listener
-        $bulkInventoryBtn.click(function () {
-            var ids = [];
-            var $checkedBoxes = $('#dataTable input[type=checkbox]:checked').not('.select_all');
-            var count = $checkedBoxes.length;
-            if (count) {
-                // Reset input value
-                $bulkInventoryInput.val('');
-                // Deletion info
-                var displayName = count > 1 ? '{{ $dataType->getTranslatedAttribute('display_name_plural') }}' : '{{ $dataType->getTranslatedAttribute('display_name_singular') }}';
-                displayName = displayName.toLowerCase();
-                $bulkInventoryCount.html(count);
-                $bulkInventoryDisplayName.html(displayName);
-                // Gather IDs
-                var tds = "";
-                $.each($checkedBoxes, function () {
-                    var id = $(this).attr('id');
-                    var parent = document.getElementById(id).parentNode.parentNode;
-                    var childs = parent.getElementsByTagName('td');
-                    tds += '<tr><td>'+childs[1].innerText+'</td><td>'+childs[3].innerText+'</td><td><input type="number" name="quantity" class="form-control" min="1" placeholder="Cantidad" required></td><td><textarea class="form-control" name="note" maxlength="250" rows="2" title="máximo 250 caracteres" placeholder="Notas" required ></textarea></td></tr>';
-                    var value = $(this).val();
-                    ids.push(value);
-                });
-                $('#movements').html(tds);
-                // Set input value
-                $bulkInventoryInput.val(ids);
-                // Show modal
-                $bulkInventoryModal.modal('show');
-            } else {
-                // No row selected
-                toastr.warning('Debe seleccionar al menos un registro antes de usar el movimiento masivo.');
-            }
-        });
-        $.ajax({
-            url:"/api/v1/inventories/movements/1",
-            type: 'GET',
-            dataType:'json',
-            success:function(response){
-                if(response.status == 200){
-                    var options = "";
-                    response.data.forEach(element => {
-                        options += '<option value="'+element.id+'">'+element.name+'</option>'
-                    });
-                    $('#movement_types_id').html(options);
-                }
-            },
-            error: function(err){
-                
-            }
-        });
-
-        function submitForm(event){
-            var flag = true;
-            event.preventDefault();
-            var form = document.getElementById('bulk_inventory_form');
-            var quantities = form.elements.quantity;
-            var notes = form.elements.note;
-            var ids = $('#bulk_inventory_input').val().split(',');
-            var json = [];
-            if(ids.length > 1){
-                for (let index = 0; index < ids.length; index++) {
-                    json.push({
-                        id: ids[index],
-                        quantity: quantities[index].value,
-                        note: notes[index].value,
-                    });
-                }
-            }else{
-                json.push({
-                    id: ids[0],
-                    quantity: quantities.value,
-                    note: notes.value,
-                });
-            }
-            
-            $('#json').val(JSON.stringify(json));
-            this.submit();
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("bulk_inventory_form").addEventListener('submit', submitForm);
-        });
-    </script>
-    {{-- script for modal inventory transfer --}}
-    <script>
-        // Bulk delete selectors
-        var $bulkTransferBtn = $('#bulk_transfer_btn');
-        var $bulkTransferModal = $('#bulk_transfer_modal');
-        var $bulkTransferCount = $('#bulk_transfer_count');
-        var $bulkTransferDisplayName = $('#bulk_transfer_display_name');
-        var $bulkTransferInput = $('#bulk_transfer_input');
-        // Reposition modal to prevent z-index issues
-        $bulkTransferModal.appendTo('body');
-        //sucursals
-        let offices;
-        $.ajax({
-            url:"/api/v1/inventories/offices",
-            type: 'GET',
-            dataType:'json',
-            success:function(response){
-                if(response.status == 200){
-                    offices = "";
-                    response.data.forEach(element => {
-                        offices += '<option value="'+element.id+'">'+element.name+'</option>'
-                    });
-                }
-            },
-            error: function(err){
-                
-            }
-        });
-        // Bulk delete listener
-        $bulkTransferBtn.click(function () {
-            var ids = [];
-            var $checkedBoxes = $('#dataTable input[type=checkbox]:checked').not('.select_all');
-            var count = $checkedBoxes.length;
-            if (count) {
-                // Reset input value
-                $bulkTransferInput.val('');
-                // Deletion info
-                var displayName = count > 1 ? '{{ $dataType->getTranslatedAttribute('display_name_plural') }}' : '{{ $dataType->getTranslatedAttribute('display_name_singular') }}';
-                displayName = displayName.toLowerCase();
-                $bulkTransferCount.html(count);
-                $bulkTransferDisplayName.html(displayName);
-                // Gather IDs
-                var tds = "";
-                $.each($checkedBoxes, function () {
-                    var id = $(this).attr('id');
-                    var parent = document.getElementById(id).parentNode.parentNode;
-                    var childs = parent.getElementsByTagName('td');
-                    tds += '<tr><td>'+childs[1].innerText+'</td><td>'+childs[3].innerText+'</td><td><input type="number" name="quantity" class="form-control" min="1" placeholder="Cantidad" required></td><td><textarea class="form-control" name="note" maxlength="250" rows="2" title="máximo 250 caracteres" placeholder="Notas" required ></textarea></td><td><select class="form-control select2" name="office_id" style="width: 100% !important" required>'+offices+'</select></td></tr>';
-                    var value = $(this).val();
-                    ids.push(value);
-                });
-                $('#movements_transfer').html(tds);
-                $('.select2').select2();
-                // Set input value
-                $bulkTransferInput.val(ids);
-                // Show modal
-                $bulkTransferModal.modal('show');
-            } else {
-                // No row selected
-                toastr.warning('Debe seleccionar al menos un registro antes de usar el movimiento masivo.');
-            }
-        });
-        $.ajax({
-            url:"/api/v1/inventories/movements/2",
-            type: 'GET',
-            dataType:'json',
-            success:function(response){
-                if(response.status == 200){
-                    var options = "";
-                    response.data.forEach(element => {
-                        options += '<option value="'+element.id+'">'+element.name+'</option>'
-                    });
-                    $('#movement_types_id_transfer').html(options);
-                }
-            },
-            error: function(err){
-                
-            }
-        });
-
-        function submitFormTransfer(event){
-            var flag = true;
-            event.preventDefault();
-            var form = document.getElementById('bulk_transfer_form');
-            var quantities = form.elements.quantity;
-            var notes = form.elements.note;
-            var notes = form.elements.note;
-            var list_offices = form.elements.office_id;
-            var ids = $('#bulk_transfer_input').val().split(',');
-            var json = [];
-            if(ids.length > 1){
-                for (let index = 0; index < ids.length; index++) {
-                    json.push({
-                        id: ids[index],
-                        quantity: quantities[index].value,
-                        note: notes[index].value,
-                        office_id: list_offices[index].value
-                    });
-                }
-            }else{
-                json.push({
-                    id: ids[0],
-                    quantity: quantities.value,
-                    note: notes.value,
-                    office_id: list_offices.value
-                });
-            }
-            
-            $('#json_transfer').val(JSON.stringify(json));
-            this.submit();
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("bulk_transfer_form").addEventListener('submit', submitFormTransfer);
-        });
-        </script>    
 @stop

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
@@ -17,14 +17,15 @@ use TCG\Voyager\Facades\Voyager;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/admin');
 });
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
-    //inventory
-    Route::get('/inventories/{id}/history', [HistoryController::class, 'historyByInventory'])->name('inventories.history');
+    Route::group(['prefix' => 'customers'], function () {
+        Route::post('/store_modal', [CustomerController::class, 'store_modal'])->name('customers.store_modal');
+    });
 });
 
 Auth::routes();

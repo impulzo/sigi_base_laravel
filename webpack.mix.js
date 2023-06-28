@@ -13,8 +13,8 @@ const path = require('path');
  */
 
 mix.ts("resources/js/app.tsx", "public/js")
-    .ts("resources/js/pages/*/*.tsx", "public/js/pages")
     .ts("resources/js/pages/dashboard/*.tsx", "public/js/pages")
+    .ts("resources/js/pages/invoices/*.tsx", "public/js/pages")
     .webpackConfig({
         resolve: {
             extensions: [".js", ".jsx", ".ts", ".tsx"],

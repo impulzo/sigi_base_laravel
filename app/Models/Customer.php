@@ -10,8 +10,18 @@ class Customer extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function user_data()
-    {
-        return $this->hasOne(User::class, 'id', 'user_id');
-    }
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'full_name',
+        'gender',
+        'address',
+        'phone',
+        'rfc',
+        'reason',
+        'regime',
+        'cfdi_use',
+        'postal_code',
+        'email'
+    ];
 }

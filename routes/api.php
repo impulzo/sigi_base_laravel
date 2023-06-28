@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CustomerController;
-use App\Http\Controllers\Api\InventoryController;
+use App\Http\Controllers\Api\ProductoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,12 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'v1'], function () {
-    Route::group(['prefix' => 'inventories'], function () {
-        Route::get('/movements/{type}', [InventoryController::class,'getMovements']);
-        Route::get('/offices', [InventoryController::class,'getOffices']);
-    });
     Route::group(['prefix' => 'customers'], function () {
+        Route::get('/', [CustomerController::class,'list']);
         Route::get('/validate/{email}', [CustomerController::class,'validate_user']);
+    });
+    Route::group(['prefix' => 'products'], function () {
+        Route::get('/', [ProductoController::class,'list']);
     });
 });
 
