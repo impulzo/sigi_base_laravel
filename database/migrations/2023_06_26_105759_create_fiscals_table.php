@@ -23,7 +23,6 @@ class CreateFiscalsTable extends Migration
             $table->longText('certificate')->nullable();
             $table->longText('private_key')->nullable();
             $table->string('private_key_password')->nullable();
-            $table->integer('user_id');
             $table->timestamps();
         });
     }

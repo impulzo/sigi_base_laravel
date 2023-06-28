@@ -2,7 +2,7 @@
 
 @section('content')
         <div class="login-container" style="margin-top: -250px; position: absolute; align-content: center;">
-            <?php $admin_logo_img = Voyager::setting('admin.icon_image', ''); ?>
+            <?php $admin_logo_img = Voyager::setting('admin.login_image', ''); ?>
             @if($admin_logo_img == '')
                 <img src="{{ voyager_asset('images/logo-icon.png') }}" alt="logo" style="width: 50%; height: 50%; margin-left: 25%;">
             @else

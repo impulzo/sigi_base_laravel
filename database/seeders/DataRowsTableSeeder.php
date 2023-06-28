@@ -42,7 +42,7 @@ class DataRowsTableSeeder extends Seeder
                 'data_type_id' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'display_name' => 'Name',
+                'display_name' => 'Usuario',
                 'edit' => 1,
                 'field' => 'name',
                 'id' => 2,
@@ -74,7 +74,7 @@ class DataRowsTableSeeder extends Seeder
                 'data_type_id' => 1,
                 'delete' => 0,
                 'details' => '{}',
-                'display_name' => 'Password',
+                'display_name' => 'Contraseña',
                 'edit' => 1,
                 'field' => 'password',
                 'id' => 4,
@@ -102,7 +102,7 @@ class DataRowsTableSeeder extends Seeder
             5 => 
             array (
                 'add' => 0,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 1,
                 'delete' => 0,
                 'details' => '{}',
@@ -111,7 +111,7 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'created_at',
                 'id' => 6,
                 'order' => 6,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'timestamp',
             ),
@@ -166,7 +166,7 @@ class DataRowsTableSeeder extends Seeder
             9 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 1,
                 'delete' => 0,
                 'details' => '{"model":"TCG\\\\Voyager\\\\Models\\\\Role","table":"roles","type":"belongsToMany","column":"id","key":"id","label":"display_name","pivot_table":"user_roles","pivot":"1","taggable":"0"}',
@@ -175,7 +175,7 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'user_belongstomany_role_relationship',
                 'id' => 10,
                 'order' => 11,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'relationship',
             ),
@@ -357,17 +357,17 @@ class DataRowsTableSeeder extends Seeder
             ),
             21 => 
             array (
-                'add' => 1,
-                'browse' => 1,
+                'add' => 0,
+                'browse' => 0,
                 'data_type_id' => 1,
                 'delete' => 1,
                 'details' => '{}',
                 'display_name' => 'Email Verified At',
-                'edit' => 1,
+                'edit' => 0,
                 'field' => 'email_verified_at',
                 'id' => 22,
                 'order' => 6,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'timestamp',
             ),
@@ -598,23 +598,23 @@ class DataRowsTableSeeder extends Seeder
             36 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 1,
                 'delete' => 1,
                 'details' => '{}',
                 'display_name' => 'Api Token',
-                'edit' => 1,
+                'edit' => 0,
                 'field' => 'api_token',
                 'id' => 93,
                 'order' => 10,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'text',
             ),
             37 => 
             array (
                 'add' => 0,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 1,
                 'delete' => 1,
                 'details' => '{}',
@@ -623,7 +623,7 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'deleted_at',
                 'id' => 94,
                 'order' => 13,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'timestamp',
             ),
@@ -1047,38 +1047,6 @@ class DataRowsTableSeeder extends Seeder
             array (
                 'add' => 1,
                 'browse' => 0,
-                'data_type_id' => 13,
-                'delete' => 1,
-                'details' => '{}',
-                'display_name' => 'User Id',
-                'edit' => 0,
-                'field' => 'user_id',
-                'id' => 133,
-                'order' => 14,
-                'read' => 0,
-                'required' => 1,
-                'type' => 'hidden',
-            ),
-            65 => 
-            array (
-                'add' => 0,
-                'browse' => 1,
-                'data_type_id' => 13,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Models\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'display_name' => 'Usuario',
-                'edit' => 0,
-                'field' => 'customer_belongsto_user_relationship',
-                'id' => 134,
-                'order' => 16,
-                'read' => 0,
-                'required' => 0,
-                'type' => 'relationship',
-            ),
-            66 => 
-            array (
-                'add' => 1,
-                'browse' => 0,
                 'data_type_id' => 15,
                 'delete' => 1,
                 'details' => '{}',
@@ -1091,71 +1059,7 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 1,
                 'type' => 'text',
             ),
-            67 => 
-            array (
-                'add' => 1,
-                'browse' => 1,
-                'data_type_id' => 15,
-                'delete' => 1,
-                'details' => '{}',
-                'display_name' => 'User Id',
-                'edit' => 0,
-                'field' => 'user_id',
-                'id' => 136,
-                'order' => 7,
-                'read' => 1,
-                'required' => 1,
-                'type' => 'hidden',
-            ),
-            68 => 
-            array (
-                'add' => 0,
-                'browse' => 1,
-                'data_type_id' => 15,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Models\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'display_name' => 'Usuario',
-                'edit' => 0,
-                'field' => 'invoice_belongsto_user_relationship',
-                'id' => 137,
-                'order' => 10,
-                'read' => 1,
-                'required' => 0,
-                'type' => 'relationship',
-            ),
-            69 => 
-            array (
-                'add' => 1,
-                'browse' => 1,
-                'data_type_id' => 10,
-                'delete' => 1,
-                'details' => '{}',
-                'display_name' => 'User Id',
-                'edit' => 0,
-                'field' => 'user_id',
-                'id' => 138,
-                'order' => 7,
-                'read' => 1,
-                'required' => 1,
-                'type' => 'hidden',
-            ),
-            70 => 
-            array (
-                'add' => 0,
-                'browse' => 1,
-                'data_type_id' => 10,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Models\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'display_name' => 'Usuario',
-                'edit' => 0,
-                'field' => 'product_belongsto_user_relationship',
-                'id' => 139,
-                'order' => 16,
-                'read' => 1,
-                'required' => 0,
-                'type' => 'relationship',
-            ),
-            71 => 
+            65 => 
             array (
                 'add' => 0,
                 'browse' => 0,
@@ -1171,7 +1075,7 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 1,
                 'type' => 'text',
             ),
-            72 => 
+            66 => 
             array (
                 'add' => 1,
                 'browse' => 1,
@@ -1187,10 +1091,10 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 1,
                 'type' => 'text',
             ),
-            73 => 
+            67 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1199,11 +1103,11 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'password',
                 'id' => 142,
                 'order' => 3,
-                'read' => 1,
+                'read' => 0,
                 'required' => 1,
                 'type' => 'text',
             ),
-            74 => 
+            68 => 
             array (
                 'add' => 1,
                 'browse' => 1,
@@ -1219,10 +1123,10 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 0,
                 'type' => 'text',
             ),
-            75 => 
+            69 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1235,10 +1139,10 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 0,
                 'type' => 'text',
             ),
-            76 => 
+            70 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1247,14 +1151,14 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'fiscal_regime',
                 'id' => 145,
                 'order' => 6,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'text',
             ),
-            77 => 
+            71 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1263,14 +1167,14 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'certificate',
                 'id' => 146,
                 'order' => 7,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'file',
             ),
-            78 => 
+            72 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1279,14 +1183,14 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'private_key',
                 'id' => 147,
                 'order' => 8,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'file',
             ),
-            79 => 
+            73 => 
             array (
                 'add' => 1,
-                'browse' => 1,
+                'browse' => 0,
                 'data_type_id' => 17,
                 'delete' => 1,
                 'details' => '{}',
@@ -1295,27 +1199,11 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'private_key_password',
                 'id' => 148,
                 'order' => 9,
-                'read' => 1,
+                'read' => 0,
                 'required' => 0,
                 'type' => 'text',
             ),
-            80 => 
-            array (
-                'add' => 1,
-                'browse' => 1,
-                'data_type_id' => 17,
-                'delete' => 1,
-                'details' => '{}',
-                'display_name' => 'User Id',
-                'edit' => 1,
-                'field' => 'user_id',
-                'id' => 149,
-                'order' => 10,
-                'read' => 1,
-                'required' => 1,
-                'type' => 'hidden',
-            ),
-            81 => 
+            74 => 
             array (
                 'add' => 0,
                 'browse' => 0,
@@ -1331,7 +1219,7 @@ class DataRowsTableSeeder extends Seeder
                 'required' => 0,
                 'type' => 'timestamp',
             ),
-            82 => 
+            75 => 
             array (
                 'add' => 0,
                 'browse' => 0,
@@ -1346,22 +1234,6 @@ class DataRowsTableSeeder extends Seeder
                 'read' => 0,
                 'required' => 0,
                 'type' => 'timestamp',
-            ),
-            83 => 
-            array (
-                'add' => 0,
-                'browse' => 1,
-                'data_type_id' => 17,
-                'delete' => 1,
-                'details' => '{"model":"App\\\\Models\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'display_name' => 'Usuario',
-                'edit' => 0,
-                'field' => 'fiscal_belongsto_user_relationship',
-                'id' => 152,
-                'order' => 13,
-                'read' => 1,
-                'required' => 0,
-                'type' => 'relationship',
             ),
         ));
         

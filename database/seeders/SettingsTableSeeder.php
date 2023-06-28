@@ -75,6 +75,18 @@ class SettingsTableSeeder extends Seeder
             ])->save();
         }
 
+        $setting = $this->findSetting('admin.login_image');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => __('Imagen del login'),
+                'value'        => NULL,
+                'details'      => '',
+                'type'         => 'image',
+                'order'        => 6,
+                'group'        => 'Admin',
+            ])->save();
+        }
+
         $setting = $this->findSetting('admin.address');
         if (!$setting->exists) {
             $setting->fill([
@@ -82,7 +94,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '#',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 6,
+                'order'        => 7,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -94,7 +106,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => 'example@gmail.com',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 7,
+                'order'        => 8,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -106,7 +118,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '###-###-####',
                 'details'      => '',
                 'type'         => 'text',
-                'order'        => 8,
+                'order'        => 9,
                 'group'        => 'Admin',
             ])->save();
         }
@@ -118,7 +130,7 @@ class SettingsTableSeeder extends Seeder
                 'value'        => '<div><div><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit. Aspernatur, nulla eum libero officiis iste, blanditiis eos fugiat perspiciatis eius sint labore quia veritatis autem quod placeat porro, deleniti earum. Molestiae?</div></div>',
                 'details'      => '',
                 'type'         => 'rich_text_box',
-                'order'        => 9,
+                'order'        => 10,
                 'group'        => 'Admin',
             ])->save();
         }

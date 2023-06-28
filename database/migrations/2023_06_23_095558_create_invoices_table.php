@@ -20,7 +20,6 @@ class CreateInvoicesTable extends Migration
             $table->string('link_pdf');
             $table->string('link_xml');
             $table->text('products');
-            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -1,0 +1,18 @@
+.li__display{
+   display: block; 
+}
+
+.site-footer-right{
+    display: none !important;
+}
+
+.side-menu-container .navbar-header{
+  background-color: #353d47 !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .li__display {
+      display: none !important;
+    }
+  }

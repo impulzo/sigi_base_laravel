@@ -27,7 +27,6 @@ class CreateCustomersTable extends Migration
             $table->string('cfdi_use', 100);
             $table->string('postal_code', 10);
             $table->string('email', 80)->nullable();
-            $table->integer('user_id');
             $table->timestamps();
             $table->softDeletes();
         });

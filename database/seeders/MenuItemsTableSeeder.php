@@ -255,8 +255,8 @@ class MenuItemsTableSeeder extends Seeder
                 'parent_id' => NULL,
                 'route' => 'voyager.fiscals.index',
                 'target' => '_self',
-                'title' => 'Fiscals',
-                'updated_at' => '2023-06-28 00:29:00',
+                'title' => 'Datos fiscales',
+                'updated_at' => '2023-06-28 14:22:53',
                 'url' => '',
             ),
         ));

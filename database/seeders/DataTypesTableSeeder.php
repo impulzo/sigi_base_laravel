@@ -35,7 +35,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => 'TCG\\Voyager\\Policies\\UserPolicy',
                 'server_side' => 0,
                 'slug' => 'users',
-                'updated_at' => '2022-11-10 01:12:13',
+                'updated_at' => '2023-06-28 14:17:00',
             ),
             1 => 
             array (
@@ -107,7 +107,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'server_side' => 0,
                 'slug' => 'products',
-                'updated_at' => '2023-06-28 00:22:14',
+                'updated_at' => '2023-06-28 14:22:02',
             ),
             5 => 
             array (
@@ -125,7 +125,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'server_side' => 0,
                 'slug' => 'customers',
-                'updated_at' => '2023-06-28 00:17:57',
+                'updated_at' => '2023-06-28 14:19:11',
             ),
             6 => 
             array (
@@ -143,7 +143,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'server_side' => 0,
                 'slug' => 'invoices',
-                'updated_at' => '2023-06-28 00:20:56',
+                'updated_at' => '2023-06-28 14:20:18',
             ),
             7 => 
             array (
@@ -151,8 +151,8 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2023-06-28 00:23:37',
                 'description' => NULL,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'display_name_plural' => 'Fiscals',
-                'display_name_singular' => 'Fiscal',
+                'display_name_plural' => 'Datos fiscales',
+                'display_name_singular' => 'Datos fiscales',
                 'generate_permissions' => 1,
                 'icon' => 'voyager-receipt',
                 'id' => 17,
@@ -161,7 +161,7 @@ class DataTypesTableSeeder extends Seeder
                 'policy_name' => NULL,
                 'server_side' => 0,
                 'slug' => 'fiscals',
-                'updated_at' => '2023-06-28 00:28:38',
+                'updated_at' => '2023-06-28 14:18:41',
             ),
         ));
         

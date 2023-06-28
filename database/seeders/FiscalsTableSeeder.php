@@ -23,7 +23,6 @@ class FiscalsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'fiscal_regime' => NULL,
                 'id' => 1,
-                'user_id' => 1,
                 'name' => NULL,
                 'user' => "test.invoice@gmail.com",
                 'password' => "12345678a",

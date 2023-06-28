@@ -20,7 +20,6 @@ class CreateProductsTable extends Migration
             $table->decimal('price', 10, 2);
             $table->string('product_code',15);
             $table->string('unit_code',10);
-            $table->integer('user_id');
             $table->timestamps();
             $table->softDeletes();
         });
