@@ -10,6 +10,16 @@ export const getCustomers = async (url: any) => {
     }
 };
 
+export const getInvoices = async (url: any) => {
+    try {
+        const response = await axios.get(url+'/api/v1/invoices');
+        return response.data.status == 200 ? response.data.data : [];
+    } catch (error) {
+        console.error('Error al obtener los datos:', error);
+        throw error;
+    }
+};
+
 
 export const getProducts = async (url: any) => {
     try {

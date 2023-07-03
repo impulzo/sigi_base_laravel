@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\InvoiceController;
 use App\Http\Controllers\Api\ProductoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,9 @@ Route::group(['prefix' => 'v1'], function () {
     });
     Route::group(['prefix' => 'products'], function () {
         Route::get('/', [ProductoController::class,'list']);
+    });
+    Route::group(['prefix' => 'invoices'], function () {
+        Route::get('/', [InvoiceController::class,'list']);
     });
 });
 

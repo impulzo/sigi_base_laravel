@@ -46,10 +46,9 @@ class CustomerController extends VoyagerBaseController
                   ]);
                   DB::commit();
                   $data =  [
-                        'message'    => "Registro realizado con éxito",
+                        'message'    => "Cliente registrado con éxito",
                         'alert-type' => 'success',
                   ];
-                  return back()->with($data);
             } catch (\Exception $ex) {
                   DB::rollBack();
                   $data =  [

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import ReactDOM from 'react-dom';
 import Widget from '../../components/widgets/Widget';
-import Bar from '../../components/charts/BarChart';
 import DoughnutChart from '../../components/charts/DoughnutChart';
 import { dashboardState } from './Props';
+import TableInvoices from './components/TableInvoices';
 const app = document.getElementById("r-dashboard");
-const url = app?.getAttribute('data-url');
+const URL = app?.getAttribute('data-url');
 
 const Dashboard = () => {
 
@@ -34,10 +33,12 @@ const Dashboard = () => {
         });
     }, []);
 
+
+
     return (
         <div className='container-fluid'>
             <div className="row">
-            <div className="col-12 col-sm-6 col-md-4">
+                <div className="col-12 col-sm-6 col-md-4">
                     <Widget title='Timbres disponibles' icon='voyager-certificate' number={state.invoiceAvailable.toString()} color='div__card--green' />
                 </div>
                 <div className="col-12 col-sm-6 col-md-4">
@@ -47,11 +48,11 @@ const Dashboard = () => {
                     <Widget title='Ingresos' icon='voyager-dollar' number={'$ 50.00'} color='div__card--teal' />
                 </div>
             </div>
-            {/* <div className="row">
-                <div className="col-md-6 col-sm-12">
-                    <Bar data={state.data_example} options={{ responsive: true, plugins: { title: { display: true, text: 'Facturas' } } }} />
+            <div className="row">
+                <div className="col-md-12 col-sm-12">
+                    <TableInvoices url={URL as string} />
                 </div>
-            </div> */}
+            </div>
             <div className="row">
                 <div className="col-md-4 col-sm-12"></div>
                 <div className="col-md-4 col-sm-12">

@@ -18,16 +18,19 @@
         {{ __('voyager::generic.' . ($edit ? 'edit' : 'add')) . ' ' . $dataType->getTranslatedAttribute('display_name_singular') }}
     </h1>
     <a class="btn btn-info" id="bulk_customer_btn"><i class="voyager-person"></i> <span>Nuevo cliente</span></a>
+    <a class="btn btn-info" id="bulk_product_btn"><i class="voyager-data"></i> <span>Nuevo producto</span></a>
     @include('voyager::multilingual.language-selector')
 @stop
 
 @section('content')
     <div class="page-content browse container-fluid">
-        <div id="r-invoices" data-csrf="{{ csrf_token() }}" data-ip="{{env('INVOICE_IMPULZO_IP')}}" data-url="{{url('/')}}" >
+        <div id="r-invoices" data-csrf="{{ csrf_token() }}" data-ip="{{ env('INVOICE_IMPULZO_IP') }}"
+            data-url="{{ url('/') }}">
 
         </div>
     </div>
     @include('vendor.voyager.invoices.modals.customer')
+    @include('vendor.voyager.invoices.modals.product')
 @stop
 
 @section('javascript')
@@ -87,10 +90,46 @@
                     $('#cfdi_use').html(options);
                 }
             });
+            $.ajax({
+                type: "GET",
+                url: "{{ env('INVOICE_IMPULZO_IP') }}/api/v1/catalogs/products_or_services?keyword=const",
+                dataType: "json",
+                success: function(response) {
+                    var options = '';
+                    if (response.length > 0) {
+                        response.forEach(x => {
+                            options += '<option value="' + x.Value + '">' + x.Name + '</option>'
+                        });
+                    } else {
+                        options += '<option value selected>Ninguno</option>';
+                    }
+                    $('#product_code').html(options);
+                }
+            });
+            $.ajax({
+                type: "GET",
+                url: "{{ env('INVOICE_IMPULZO_IP') }}/api/v1/catalogs/units?keyword=G",
+                dataType: "json",
+                success: function(response) {
+                    var options = '';
+                    if (response.length > 0) {
+                        response.forEach(x => {
+
+                            options += '<option value="' + x.Value + '">' + x.Name + '</option>'
+                        });
+                    } else {
+                        options += '<option value selected>Ninguno</option>';
+                    }
+                    $('#unit_code').html(options);
+                }
+            });
         });
         //open modal
         $('#bulk_customer_btn').click(function() {
             $('#bulk_customer_modal').modal('show');
+        });
+        $('#bulk_product_btn').click(function() {
+            $('#bulk_product_modal').modal('show');
         });
     </script>
 @stop

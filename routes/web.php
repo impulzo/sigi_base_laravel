@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
@@ -25,6 +26,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
     Route::group(['prefix' => 'customers'], function () {
         Route::post('/store_modal', [CustomerController::class, 'store_modal'])->name('customers.store_modal');
+    });
+    Route::group(['prefix' => 'products'], function () {
+        Route::post('/store_modal', [ProductController::class, 'store_modal'])->name('products.store_modal');
     });
 });
 

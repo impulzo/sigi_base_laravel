@@ -16,4 +16,9 @@ class Invoice extends Model
         'link_xml',
         'products'
     ];
+
+    public function client()
+    {
+        return $this->hasOne(Customer::class, 'id', 'customer_id');
+    }
 }
