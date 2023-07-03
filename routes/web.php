@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
@@ -29,6 +30,10 @@ Route::group(['prefix' => 'admin'], function () {
     });
     Route::group(['prefix' => 'products'], function () {
         Route::post('/store_modal', [ProductController::class, 'store_modal'])->name('products.store_modal');
+    });
+    Route::group(['prefix' => 'reports'], function () {
+        Route::get('/invoices', [ReportController::class, 'invoices'])->name('reports.invoices');
+        Route::post('/invoices/range', [ReportController::class, 'getInvoices'])->name('reports.range');
     });
 });
 
