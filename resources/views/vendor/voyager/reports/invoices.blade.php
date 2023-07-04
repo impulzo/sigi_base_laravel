@@ -60,6 +60,7 @@
                                         <th>PDF</th>
                                         <th>XML</th>
                                         <th>Cliente</th>
+                                        <th>Total</th>
                                         <th>Registro</th>
                                     </tr>
                                 </thead>
@@ -134,6 +135,7 @@
                             tds += "<tr><td><a href='"+x.link_pdf+"' target='blank'>PDF</a></td>";
                             tds += "<td><a href='"+x.link_xml+"' target='blank'>XML</a></td>";
                             tds += "<td>"+x.client.full_name+"</td>";
+                            tds += "<td>$ "+x.total.toFixed(2)+"</td>";
                             tds += "<td>"+x.date+"</td></tr>";
                         });
                         $('#tbody_inv').html(tds);

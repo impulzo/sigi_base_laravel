@@ -28,6 +28,7 @@
                 <th style="width: 20%">Enlace PDF</th>
                 <th style="width: 19%">Enlace XML</th>
                 <th style="width: 16%">Cliente</th>
+                <th style="width: 16%">Total</th>
                 <th style="width: 15%">Registro</th>
             </tr>
         </thead>
@@ -41,6 +42,7 @@
                     <td><a href="{{$invoice->link_pdf}}" target='_blank'>PDF</a></td>
                     <td><a href="{{$invoice->link_xml}}" target='_blank'>XML</a></td>
                     <td>{{$invoice->client->full_name}}</td>
+                    <td>$ {{number_format($invoice->total, 2, '.', ',')}}</td>
                     <td>{{$invoice->date}}</td>
                 </tr>
                 @php

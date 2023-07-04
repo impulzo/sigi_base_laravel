@@ -24,6 +24,10 @@ class ReportController extends Controller
             foreach ($invoices as $item) {
                 $item->client;
                 $item->date = $item->created_at->format('d/m/Y');
+                $item->products_list = json_decode($item->products);
+                foreach ($item->products_list as $product) {
+                    $item->total += $product->total;
+                };
             }
             $response['data'] = $invoices;
         } catch (\Exception $ex) {
@@ -40,8 +44,11 @@ class ReportController extends Controller
         foreach ($invoices as $item) {
             $item->client;
             $item->date = $item->created_at->format('d/m/Y');
+            $item->products_list = json_decode($item->products);
+            foreach ($item->products_list as $product) {
+                $item->total += $product->total;
+            };
         }
-
         $mpdf = new InvoiceReport();
         $mpdf->charset_in = 'utf-8';
         $title = Setting::find(1)->value;
