@@ -17,7 +17,7 @@
             <div class="col-md-12">
                 <div class="panel panel-bordered">
                     <div class="panel-body">
-                        <form action="#" method="POST" target="_blank">
+                        <form action="{{route('reports.range.pdf')}}" method="POST" target="_blank">
                             @csrf
                             <div class="row">
                                 <div class="col-md-4">

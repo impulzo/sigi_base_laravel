@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'reports'], function () {
         Route::get('/invoices', [ReportController::class, 'invoices'])->name('reports.invoices');
         Route::post('/invoices/range', [ReportController::class, 'getInvoices'])->name('reports.range');
+        Route::post('/invoices/range/pdf', [ReportController::class, 'invoicesPdf'])->name('reports.range.pdf');
     });
 });
 
