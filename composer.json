@@ -21,6 +21,7 @@
         "maatwebsite/excel": "^3.1",
         "mpdf/mpdf": "^8.1",
         "orangehill/iseed": "^3.0",
+        "stancl/tenancy": "^3.6",
         "tcg/voyager": "^1.6"
     },
     "require-dev": {
