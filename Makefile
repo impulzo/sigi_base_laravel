@@ -2,6 +2,9 @@
 husky-init:
 	npx husky install
 
+husky-chmod:
+	chmod +x .husky/pre-commit
+
 
 # PHP ARTISAN
 db-reset:
