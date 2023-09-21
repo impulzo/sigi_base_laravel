@@ -31,7 +31,7 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "ts-loader": "^9.4.2",
-        "typescript": "^5.0.3"
+        "typescript": "^5.2.2"
     },
     "dependencies": {
         "@types/react": "^18.0.31",
