@@ -72,7 +72,6 @@
                                                 @if($perm->key == 'browse_admin' && Auth::user()->role->id != 1)
                                                   <li>
                                                       <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" checked readonly>
-
                                                       <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title(str_replace('_', ' ', $perm->key))}}</label>
                                                   </li>
                                                   @break
@@ -86,15 +85,15 @@
                                                 'delete' => 'eliminar',
                                                 ];
                                                   
-                                                    $perk=$perm->key;
-                                                    $temp=explode('_',$perk);
-                                                    $temp[0]=$translations[$temp[0]];
-                                                    $rtemp=$temp[0].' '.$perm->display_name;    
+                                                    $permissionskey=$perm->key;
+                                                    $arraykeys=explode('_',$permissionskey);
+                                                    $arraykeys[0]=$translations[$arraykeys[0]];
+                                                    $displayname=$arraykeys[0].' '.$perm->display_name;    
                                                 @endphp
 
                                                 <li>
                                                   <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" @if(in_array($perm->key, $role_permissions)) checked @endif>
-                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title(str_replace('_', ' ', $rtemp))}}</label>
+                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title($displayname)}}</label>
                                                 </li>
                                             @endforeach
                                         </ul>
