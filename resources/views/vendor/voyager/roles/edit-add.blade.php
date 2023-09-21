@@ -85,15 +85,15 @@
                                                 'delete' => 'eliminar',
                                                 ];
                                                   
-                                                    $permissionskey=$perm->key;
-                                                    $arraykeys=explode('_',$permissionskey);
-                                                    $arraykeys[0]=$translations[$arraykeys[0]];
-                                                    $displayname=$arraykeys[0].' '.$perm->display_name;    
+                                                    $permissions_key=$perm->key;
+                                                    $array_keys=explode('_',$permissions_key);
+                                                    $array_keys[0]=$translations[$array_keys[0]];
+                                                    $display_name=$array_keys[0].' '.$perm->display_name;    
                                                 @endphp
 
                                                 <li>
                                                   <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" @if(in_array($perm->key, $role_permissions)) checked @endif>
-                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title($displayname)}}</label>
+                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title($display_name)}}</label>
                                                 </li>
                                             @endforeach
                                         </ul>
