@@ -5,7 +5,6 @@ husky-init:
 husky-chmod:
 	chmod +x .husky/pre-commit
 
-
 # PHP ARTISAN
 db-reset:
 	php artisan migrate:refresh --seed
