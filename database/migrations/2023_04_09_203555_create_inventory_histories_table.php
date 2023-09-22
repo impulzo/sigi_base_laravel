@@ -15,7 +15,7 @@ class CreateInventoryHistoriesTable extends Migration
     {
         Schema::create('inventory_histories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('notes',250);
+            $table->string('notes', 250);
             $table->integer('quantity');
             $table->date('movement_date');
             $table->integer('inventory_id');

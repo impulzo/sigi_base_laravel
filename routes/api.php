@@ -20,6 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//inventory
+Route::get('/v1/inventories/movements/{type}', [InventoryController::class,'getMovements']);
+Route::get('/v1/inventories/offices', [InventoryController::class,'getOffices']);
+
 Route::group(['prefix' => 'v1'], function () {
     Route::group(['prefix' => 'inventories'], function () {
         Route::get('/movements/{type}', [InventoryController::class,'getMovements']);
@@ -29,4 +33,3 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/validate/{email}', [CustomerController::class,'validate_user']);
     });
 });
-

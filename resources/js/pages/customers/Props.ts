@@ -1,5 +1,5 @@
 export interface Customer {
-    api_token: any,
+	api_token: any,
     _token: any,
     id: number,
     first_name: string,

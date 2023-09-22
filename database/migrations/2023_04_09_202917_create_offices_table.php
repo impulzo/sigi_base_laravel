@@ -15,8 +15,8 @@ class CreateOfficesTable extends Migration
     {
         Schema::create('offices', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',50);
-            $table->string('address',150)->nullable();
+            $table->string('name', 50);
+            $table->string('address', 150)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
