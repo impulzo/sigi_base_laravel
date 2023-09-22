@@ -76,9 +76,24 @@
                                                   </li>
                                                   @break
                                                 @endif
+                                                @php
+                                                $translations = [
+                                                'browse' => 'buscar',
+                                                'read' => 'leer',
+                                                'edit' => 'editar',
+                                                'add' => 'agregar',
+                                                'delete' => 'eliminar',
+                                                ];
+                                                  
+                                                    $permissions_key=$perm->key;
+                                                    $array_keys=explode('_',$permissions_key);
+                                                    $array_keys[0]=$translations[$array_keys[0]];
+                                                    $display_name=$array_keys[0].' '.$perm->display_name;    
+                                                @endphp
+
                                                 <li>
                                                   <input type="checkbox" id="permission-{{$perm->id}}" name="permissions[{{$perm->id}}]" class="the-permission" value="{{$perm->id}}" @if(in_array($perm->key, $role_permissions)) checked @endif>
-                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title(str_replace('_', ' ', $perm->key))}}</label>
+                                                  <label for="permission-{{$perm->id}}">{{\Illuminate\Support\Str::title($display_name)}}</label>
                                                 </li>
                                             @endforeach
                                         </ul>

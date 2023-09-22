@@ -355,6 +355,38 @@ class MenuItemsTableSeeder extends Seeder
                 'updated_at' => '2023-04-09 21:53:25',
                 'url' => '',
             ),
+            21 => 
+            array (
+                'color' => '#000000',
+                'created_at' => '2023-04-12 23:37:46',
+                'icon_class' => 'voyager-people',
+                'id' => 22,
+                'menu_id' => 1,
+                'order' => 10,
+                'parameters' => 'null',
+                'parent_id' => NULL,
+                'route' => 'voyager.customers.index',
+                'target' => '_self',
+                'title' => 'Clientes',
+                'updated_at' => '2023-04-13 21:22:32',
+                'url' => '',
+            ),
+            22 => 
+            array (
+                'color' => NULL,
+                'created_at' => '2023-05-18 11:01:23',
+                'icon_class' => 'voyager-documentation',
+                'id' => 23,
+                'menu_id' => 1,
+                'order' => 11,
+                'parameters' => NULL,
+                'parent_id' => NULL,
+                'route' => 'voyager.whatsapp-templates.index',
+                'target' => '_self',
+                'title' => 'Templates de whatsapp',
+                'updated_at' => '2023-05-18 11:01:23',
+                'url' => '',
+            ),
         ));
         
         
