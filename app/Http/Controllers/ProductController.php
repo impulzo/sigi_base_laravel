@@ -32,7 +32,7 @@ class ProductController extends VoyagerBaseController
             foreach ($offices as $office) {
                 $inventory = new Inventory();
                 $inventory->create([
-                    'product_id' => $data->id, 
+                    'product_id' => $data->id,
                     'office_id' => $office->id
                 ]);
             }

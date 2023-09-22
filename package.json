@@ -9,7 +9,8 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "lint": "npx eslint ./resources/js/",
-        "lint:fix": "npx eslint --fix"
+        "lint:fix": "npx eslint --fix",
+        "pre-commit": "npm run lint && vendor/bin/phpcs"
     },
     "devDependencies": {
         "@babel/preset-react": "^7.13.13",
@@ -44,7 +45,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "vendor/bin/phpcs"
+            "pre-commit": "sh .husky/pre-commit"
         }
     }
 }

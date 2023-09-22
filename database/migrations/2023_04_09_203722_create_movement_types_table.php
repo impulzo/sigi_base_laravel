@@ -15,9 +15,9 @@ class CreateMovementTypesTable extends Migration
     {
         Schema::create('movement_types', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',50);
-            $table->string('description',100);
-            $table->char('type',1);
+            $table->string('name', 50);
+            $table->string('description', 100);
+            $table->char('type', 1);
             $table->timestamps();
             $table->softDeletes();
         });

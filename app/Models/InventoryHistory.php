@@ -9,7 +9,15 @@ class InventoryHistory extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['movement_types_id', 'notes', 'quantity', 'movement_date', 'inventory_id', 'office_transfer_id', 'user_id'];
+    protected $fillable = [
+        'movement_types_id',
+        'notes',
+        'quantity',
+        'movement_date',
+        'inventory_id',
+        'office_transfer_id',
+        'user_id'
+    ];
 
     public function sucursal()
     {
