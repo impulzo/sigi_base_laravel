@@ -64,9 +64,31 @@
                                   @if(($table == 'menus' || $table == 'settings') && Auth::user()->role->id != 1)
                                     @continue
                                   @endif
+                                  @php 
+                                  $titles_translate=[
+                                    'system' => 'sistema',
+                                    'menus' => 'menús',
+                                    'roles' => 'roles',
+                                    'users' => 'usuarios',
+                                    'settings' => 'ajustes',
+                                    'transfer_data' => 'tranferencia de datos',
+                                    'modules' => 'módulos',
+                                    'payment_methods' => 'metodos de pago',
+                                    'categories' => 'categorias',
+                                    'offices' => 'oficinas',
+                                    'units' => 'unidades',
+                                    'products' => 'productos',
+                                    'movement_types' => 'tipo de movimientos',
+                                    'inventories' => 'inventarios',
+                                    'customers' => 'clientes',
+                                    'whatsapp_templates' => 'plantillas de whatsapp'
+                                    ];
+                                    $display_title = $titles_translate[$table] ?? ' ';
+                            
+                                  @endphp
                                     <li>
                                         <input type="checkbox" id="{{$table}}" class="permission-group">
-                                        <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title(str_replace('_',' ', $table))}}</strong></label>
+                                        <label for="{{$table}}"><strong>{{\Illuminate\Support\Str::title($display_title)}}</strong></label>
                                         <ul>
                                             @foreach($permission as $perm)
                                                 @if($perm->key == 'browse_admin' && Auth::user()->role->id != 1)
