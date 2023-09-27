@@ -16,7 +16,7 @@ const customer = app?.getAttribute("data-customer");
 
 const Customers = () => {
 
-	git const [state, setState] = useState<Customer>({
+	const [state, setState] = useState<Customer>({
     	api_token: api_token,
 		_token: csrf,
 		id: 0,
