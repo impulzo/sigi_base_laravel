@@ -15,11 +15,15 @@
         "node": true
     },
     "rules": {
-        "indent": ["error", "tab"],
+        "indent": ["error", "tab",  { "SwitchCase": 1 }],
+		"@typescript-eslint/indent": ["error", "tab",  { "SwitchCase": 1 }],
         "quotes": ["error", "double"],
         "@typescript-eslint/quotes": ["error", "double"],
-        "@typescript-eslint/indent": ["error", "tab"],
-        "import/extensions": ["error", "ignorePackages"],
+		"import/extensions": ["error", {
+			"tsx": "never",
+			"js": "never",
+			"jsx": "never"
+		}],
         "no-unused-vars": "error",
         "no-console": "error",
         "no-undef": "error",

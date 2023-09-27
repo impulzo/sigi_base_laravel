@@ -7,11 +7,13 @@ class Mail
 {
     protected $service;
 
-    public function __construct(RestClientFacade $service) {
+    public function __construct(RestClientFacade $service)
+    {
         $this->service = $service;
     }
 
-    public function send($to, $subject, $body){
+    public function send($to, $subject, $body)
+    {
         $response = array('status' => 200);
         try {
             $headers = null;
@@ -31,4 +33,3 @@ class Mail
         return $response;
     }
 }
-

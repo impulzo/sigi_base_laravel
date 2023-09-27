@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "window.zoomLevel": 1,
+    "editor.fontLigatures": false,
+	"files.insertFinalNewline": true,
+    "files.eol": "\n",
+	"files.trimTrailingWhitespace": true,
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.indentSize": "tabSize",
+	"editor.tabSize": 4,
+	"editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript", "typescript", "typescriptreact"]
+}
