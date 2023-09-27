@@ -96,7 +96,6 @@ class CustomerController extends VoyagerBaseController
             $response['message'] = 'Ocurrió el siguiente error: ' . $ex->getMessage();
         } finally {
             return $response;
-			
         }
     }
 }
