@@ -24,3 +24,11 @@ Require install make:
 
 * Ubuntu: sudo apt-get install make
 * Windows: Install MinGW Package Manager (Included on GitBash)
+	1. Install Chocolatey
+
+	> ``` @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin" ```
+
+	2. Install make from git bash
+
+	> ``` choco install make ```
+
