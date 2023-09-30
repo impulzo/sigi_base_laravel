@@ -22,7 +22,7 @@
                     en el apartado de perfil.
                     <center>
                         <b>
-                            <a href="http://127.0.0.1:8000/admin/profile" style="color: black;">example.com
+                            <a href="{{url('/')}}/admin/profile" style="color: black;">example.com
                             </a>
                         </b>
                     </center>

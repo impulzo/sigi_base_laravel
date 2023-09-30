@@ -1,7 +1,6 @@
 {
     "workbench.colorTheme": "Default Dark+",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "window.zoomLevel": 1,
     "editor.fontLigatures": false,
 	"files.insertFinalNewline": true,
     "files.eol": "\n",

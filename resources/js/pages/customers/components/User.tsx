@@ -4,10 +4,10 @@ import axios from "axios";
 
 const User = (props: IProps) => {
 
-	const nextStep = (e: SyntheticEvent) => {
+	const nextStep = async (e: SyntheticEvent) => {
 		e.preventDefault();
 		if (props.values.id != 0 && (props.values.before_user != props.values.user)) {
-			axios.get("http://127.0.0.1:8000/api/v1/customers/validate/" + props.values.user,
+			await axios.get("/api/v1/customers/validate/" + (props.values.user as string),
 			).then(response => {
 				if (response.status == 200) {
 					if (response.data) {
@@ -16,10 +16,7 @@ const User = (props: IProps) => {
 						props.nextStep();
 					}
 				}
-			}).catch(error => {
-				// console.log(error);
-
-			});
+			}).catch();
 		} else {
 			props.nextStep();
 		}

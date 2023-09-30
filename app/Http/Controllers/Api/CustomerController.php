@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    public function validate_user($email)
+    public function validateUser($email)
     {
         $user = User::where('email', $email)->first();
         return response()->json([
