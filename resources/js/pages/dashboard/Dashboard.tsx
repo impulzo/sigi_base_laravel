@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import ReactDOM from "react-dom";
 import Widget from "../../components/widgets/Widget";
 import Bar from "../../components/charts/BarChart";
 import DoughnutChart from "../../components/charts/DoughnutChart";
-import { dashboardState } from "./Props";
+import { DashboardState } from "./Props";
 const app = document.getElementById("r-dashboard");
-const url = app?.getAttribute("data-url");
 
 const Dashboard = () => {
 
-	const [state, setState] = useState<dashboardState>({
-		count_example: 0,
-		data_example: {
+	const [state, setState] = useState<DashboardState>({
+		countExample: 0,
+		dataExample: {
 			labels: [],
 			datasets: [],
 		},
 	});
 
 	useEffect(() => {
-		setState({ ...state, count_example: 5 });
+		setState({ ...state, countExample: 5 });
 		setState({
-			...state, data_example: {
+			...state, dataExample: {
 				labels: ["example 1", "example 2"],
 				datasets: [
 					{
@@ -38,12 +36,12 @@ const Dashboard = () => {
 		<div className='container-fluid'>
 			<div className="row">
 				<div className="col-12 col-sm-6 col-md-3">
-					<Widget title='Example' icon='voyager-categories' number={state.count_example.toString()} color='div__card--green' />
+					<Widget title='Example' icon='voyager-categories' number={state.countExample.toString()} color='div__card--green' />
 				</div>
 			</div>
 			<div className="row">
 				<div className="col-md-6 col-sm-12">
-					<Bar data={state.data_example} options={{ responsive: true, plugins: { title: { display: true, text: "Example" } } }} />
+					<Bar data={state.dataExample} options={{ responsive: true, plugins: { title: { display: true, text: "Example" } } }} />
 				</div>
 			</div>
 			<div className="row">
@@ -53,7 +51,7 @@ const Dashboard = () => {
 			</div>
 			<div className="row">
 				<div className="col-md-4 col-sm-12">
-					<DoughnutChart data={state.data_example} options={{ responsive: true, plugins: { title: { display: true, text: "Example" } } }} />
+					<DoughnutChart data={state.dataExample} options={{ responsive: true, plugins: { title: { display: true, text: "Example" } } }} />
 				</div>
 			</div>
 		</div>

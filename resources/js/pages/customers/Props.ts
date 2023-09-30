@@ -1,6 +1,6 @@
 export interface Customer {
-	api_token: any,
-	_token: any,
+	apiToken: string,
+	token: string,
 	id: number,
 	first_name: string,
 	last_name: string,
@@ -18,8 +18,8 @@ export interface Customer {
 }
 
 export interface IProps {
-	nextStep: Function,
-	prevStep: Function,
+	nextStep: () => void,
+	prevStep: () => void,
 	handleChange: (fields: Partial<Customer>) => void,
 	values: Partial<Customer>
 }

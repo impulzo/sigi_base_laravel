@@ -30,6 +30,6 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/offices', [InventoryController::class,'getOffices']);
     });
     Route::group(['prefix' => 'customers'], function () {
-        Route::get('/validate/{email}', [CustomerController::class,'validate_user']);
+        Route::get('/validate/{email}', [CustomerController::class,'validateUser']);
     });
 });

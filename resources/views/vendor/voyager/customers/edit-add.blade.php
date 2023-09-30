@@ -23,11 +23,11 @@
     <div class="page-content browse container-fluid">
         @if ($edit)
             @php
-                $dataTypeContent->user = $dataTypeContent->user_data->email;
-                $dataTypeContent->before_user = $dataTypeContent->user_data->email;
+                $dataTypeContent->user = $dataTypeContent->userData->email;
+                $dataTypeContent->before_user = $dataTypeContent->userData->email;
             @endphp
         @endif
-        <div id="r-customers" data-csrf="{{ csrf_token() }}" data-customer="{{$dataTypeContent}}" data-edit="{{$edit}}" data-api="{{Auth::user()->api_token}}" >
+        <div id="r-customers" data-csrf="{{ csrf_token() }}" data-url="{{url('/')}}" data-customer="{{$dataTypeContent}}" data-edit="{{$edit}}" data-api="{{Auth::user()->api_token}}" >
 
         </div>
     </div>

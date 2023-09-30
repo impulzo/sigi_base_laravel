@@ -10,14 +10,14 @@ import "./styles.scss";
 
 const app = document.getElementById("r-customers");
 const csrf = app?.getAttribute("data-csrf");
-const api_token = app?.getAttribute("data-api");
+const apiToken = app?.getAttribute("data-api");
 const edit = app?.getAttribute("data-edit");
 const customer = app?.getAttribute("data-customer");
 
 const Customers = () => {
 	const [state, setState] = useState<Customer>({
-		api_token: api_token,
-		_token: csrf,
+		apiToken: apiToken as string,
+		token: csrf as string,
 		id: 0,
 		first_name: "",
 		last_name: "",
@@ -37,19 +37,19 @@ const Customers = () => {
 	useEffect(() => {
 		if (edit == "1") {
 			try {
-				const data: Customer = JSON.parse(customer ?? "{}");
+				const data: Customer = JSON.parse(customer ?? "{}") as Customer;
 				setState((prevState) => {
 					return { ...prevState, ...data };
 				});
-			} catch (error) {}
+			} catch (error) { }
 		}
 	}, []);
 
 	const [step, setStep] = useState<number>(1);
 
 	const updateFields = (fields: Partial<Customer>) => {
-		setState((state) => {
-			return { ...state, ...fields };
+		setState((prevState) => {
+			return { ...prevState, ...fields };
 		});
 	};
 
@@ -67,11 +67,11 @@ const Customers = () => {
 
 	const onSubmit = async () => {
 		if (edit == "1") {
-			axios
+			await axios
 				.put(
-					"http://127.0.0.1:8000/admin/customers/" + state.id,
+					"/admin/customers/" + state.id.toString(),
 					{
-						_token: state._token,
+						_token: state.token,
 						first_name: state.first_name,
 						last_name: state.last_name,
 						gender: state.gender,
@@ -89,23 +89,21 @@ const Customers = () => {
 						headers: {
 							"content-type": "application/json",
 						},
-					}
+					},
 				)
 				.then((response) => {
 					if (response.status == 200) {
 						window.location.href =
-							"http://127.0.0.1:8000/admin/customers";
+						"/admin/customers/";
 					}
 				})
-				.catch((err) => {
-					// console.log(err);
-				});
+				.catch();
 		} else {
-			axios
+			await axios
 				.post(
-					"http://127.0.0.1:8000/admin/customers",
+					"/admin/customers/",
 					{
-						_token: state._token,
+						_token: state.token,
 						first_name: state.first_name,
 						last_name: state.last_name,
 						gender: state.gender,
@@ -122,17 +120,15 @@ const Customers = () => {
 						headers: {
 							"content-type": "application/json",
 						},
-					}
+					},
 				)
 				.then((response) => {
 					if (response.status == 200) {
 						window.location.href =
-							"http://127.0.0.1:8000/admin/customers";
+						"/admin/customers/";
 					}
 				})
-				.catch((err) => {
-					// console.log(err);
-				});
+				.catch();
 		}
 	};
 
