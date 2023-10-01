@@ -14,12 +14,12 @@ class DataTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('data_types')->delete();
-        
+
         \DB::table('data_types')->insert(array (
-            0 => 
+            0 =>
             array (
                 'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController',
                 'created_at' => '2022-11-09 13:18:29',
@@ -37,7 +37,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'users',
                 'updated_at' => '2022-11-10 01:12:13',
             ),
-            1 => 
+            1 =>
             array (
                 'controller' => '',
                 'created_at' => '2022-11-09 13:18:29',
@@ -55,7 +55,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'menus',
                 'updated_at' => '2022-11-09 13:18:29',
             ),
-            2 => 
+            2 =>
             array (
                 'controller' => 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController',
                 'created_at' => '2022-11-09 13:18:29',
@@ -73,7 +73,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'roles',
                 'updated_at' => '2022-11-09 14:02:45',
             ),
-            3 => 
+            3 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-02 19:26:05',
@@ -84,14 +84,14 @@ class DataTypesTableSeeder extends Seeder
                 'generate_permissions' => 1,
                 'icon' => 'voyager-credit-card',
                 'id' => 4,
-                'model_name' => 'App\\Models\\TransferDatum',
+                'model_name' => 'App\\Models\\TransferData',
                 'name' => 'transfer_data',
                 'policy_name' => NULL,
                 'server_side' => 0,
                 'slug' => 'transfer-data',
                 'updated_at' => '2023-04-02 19:47:35',
             ),
-            4 => 
+            4 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-02 19:53:08',
@@ -109,7 +109,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'modules',
                 'updated_at' => '2023-04-02 19:53:54',
             ),
-            5 => 
+            5 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-02 19:58:31',
@@ -127,7 +127,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'payment-methods',
                 'updated_at' => '2023-04-02 20:02:47',
             ),
-            6 => 
+            6 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-09 21:15:08',
@@ -145,7 +145,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'categories',
                 'updated_at' => '2023-04-09 21:16:08',
             ),
-            7 => 
+            7 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-09 21:18:07',
@@ -163,7 +163,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'offices',
                 'updated_at' => '2023-04-09 21:18:07',
             ),
-            8 => 
+            8 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-09 21:19:51',
@@ -181,7 +181,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'units',
                 'updated_at' => '2023-04-09 21:19:51',
             ),
-            9 => 
+            9 =>
             array (
                 'controller' => 'App\\Http\\Controllers\\ProductController',
                 'created_at' => '2023-04-09 21:27:15',
@@ -199,7 +199,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'products',
                 'updated_at' => '2023-04-09 22:10:39',
             ),
-            10 => 
+            10 =>
             array (
                 'controller' => NULL,
                 'created_at' => '2023-04-09 21:31:57',
@@ -217,7 +217,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'movement-types',
                 'updated_at' => '2023-04-09 21:31:57',
             ),
-            11 => 
+            11 =>
             array (
                 'controller' => 'App\\Http\\Controllers\\InventoryController',
                 'created_at' => '2023-04-09 21:40:15',
@@ -235,7 +235,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'inventories',
                 'updated_at' => '2023-04-12 21:15:01',
             ),
-            12 => 
+            12 =>
             array (
                 'controller' => 'App\\Http\\Controllers\\CustomerController',
                 'created_at' => '2023-04-12 23:37:46',
@@ -253,7 +253,7 @@ class DataTypesTableSeeder extends Seeder
                 'slug' => 'customers',
                 'updated_at' => '2023-04-13 21:42:58',
             ),
-            13 => 
+            13 =>
             array (
                 'controller' => 'App\\Http\\Controllers\\WhatsappTemplateController',
                 'created_at' => '2023-05-18 11:01:23',
@@ -272,7 +272,7 @@ class DataTypesTableSeeder extends Seeder
                 'updated_at' => '2023-05-18 11:17:18',
             ),
         ));
-        
-        
+
+
     }
 }
