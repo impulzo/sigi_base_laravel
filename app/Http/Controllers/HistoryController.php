@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class HistoryController extends Controller
 {
     
-    public function historyByInventory(Request $request, $id){
-        $data = InventoryHistory::where('inventory_id','=',$id)->get();
+    public function historyByInventory(Request $request, $id)
+    {
+        $data = InventoryHistory::where('inventory_id', '=', $id)->get();
         foreach ($data as $item) {
             $item->sucursal;
             $item->movement;

@@ -10,7 +10,7 @@ class Customer extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function user_data()
+    public function userData()
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }

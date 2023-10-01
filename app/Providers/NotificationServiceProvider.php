@@ -14,7 +14,7 @@ class NotificationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Mail',function(){
+        $this->app->singleton('Mail', function () {
             return new \App\Libraries\Notifications\Mail(new RestClientFacade);
         });
     }

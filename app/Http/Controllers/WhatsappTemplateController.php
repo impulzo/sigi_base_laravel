@@ -7,11 +7,11 @@ use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 
 class WhatsappTemplateController extends VoyagerBaseController
 {
-      public function store(Request $request)
-      {
-            $request->merge([
-                  'status' => 'Pendiente'
-            ]);
-            return parent::store($request);
-      }
+    public function store(Request $request)
+    {
+          $request->merge([
+                'status' => 'Pendiente'
+          ]);
+          return parent::store($request);
+    }
 }
